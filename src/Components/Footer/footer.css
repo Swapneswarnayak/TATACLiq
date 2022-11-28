@@ -1,0 +1,155 @@
+.firstpart{
+    /* border: 2px solid teal; */
+    display: flex;
+    justify-content:space-evenly;
+    background-color: hsl(0,0%,96%)
+}
+.firstpart>div{
+    padding: 30px;
+    /* border: 2px solid red; */
+    color:hsl(0, 0%, 0%);
+}
+
+.secondPart{
+   
+    /* border: 2px solid teal; */
+    margin:30px;
+    padding: auto;
+    width: 95%;
+    display: block;
+    margin: auto;
+    justify-content: space-evenly;
+    display: flex;
+}
+.leftPart{
+    display: flex;
+    padding-top: 20px;
+    width:40%;
+    /* border: 2px solid teal; */
+   
+   
+}
+.leftPart>ul>a{
+    color: black;
+    
+
+}
+.leftPart>ul{
+    list-style-type: none;
+    color:#242323;
+    font-size: bold;
+}
+li{
+ padding-bottom:10px;
+ font-weight:200;
+}
+.rightPart{
+    display: flex;
+    padding-top: 20px;
+    /* border: 2px solid red; */
+    /* margin: auto; */
+    /* padding: 20px; */
+   width:45%
+ 
+}
+
+.rightPart>ul{
+    list-style-type: none;
+     
+}
+
+.rightPart>ul>a{
+ color:black;
+}
+.rightPart>ul>li{
+ 
+ list-style-type: none;
+}
+
+.icon{
+    
+    display: flex;
+    margin-top:20px;
+    margin-bottom: 30px;
+    background-color:  hsl(0,0%,96%);
+     /* border: 2px solid yellow;  */
+      height: 100px;
+
+    width: 100%;
+}
+.icon>div{
+    margin: auto;
+     padding:auto;
+    /* border: 2px solid teal; */
+    height:50%; 
+    width: 30%;
+}
+.icon-d{
+    /* border: 2px solid teal; */
+    margin: auto; 
+   position:relative;
+    
+}
+.d{
+    display: flex;
+    /* border: 2px solid teal; */
+    position: absolute;
+    top: 90%;
+    left: 50%;
+    margin: -30px 0 0 -10px; 
+      
+}
+.lasticon{
+    /* border: 2px solid teal; */
+    margin: auto; 
+   position:relative;
+    
+}
+.lasticon>div{
+    /* border: 2px solid teal; */
+    position: absolute;
+    top: 90%;
+    left: 30%;
+    margin: -30px 0 0 -50px; 
+      
+}
+.logo{
+    /* border: 2px solid #0eba53; */
+    margin: auto; 
+   position:relative;
+   height: 300px; 
+
+}
+.logo>.logoc{
+    display: flex;
+    /* border: 2px solid red; */
+    position: absolute;
+    height: 30%;
+    width: 50%;
+    top: 90%;
+    left: 38%;
+    margin: -30px 0 0 -50px; 
+}
+.logoc>div{
+    margin: auto;
+
+    /* border: 2px solid rgb(18, 200, 39); */
+    height: 70%;
+    width: 15%;  
+}
+
+.lastPart{
+    /* border: 2px solid teal; */
+    width: 85%;
+    display: block;
+    margin: auto;
+}
+
+
+    a { 
+ 
+        color:black;
+        
+        }
+
+
