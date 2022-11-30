@@ -1,12 +1,9 @@
 import React from 'react'
-import Navbar from '../Navbar/Navbar'
-import MyBag from "../Navbar/MyBag"
+import Cart from '../Pages/Cart'
 const AllRoutes = () => {
   return (
     <div>
-        <Navbar />
-        <MyBag />
-    
+       <Cart />
     </div>
   )
 }
