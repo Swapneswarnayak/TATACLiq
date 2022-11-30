@@ -1,26 +1,12 @@
-import React, { useEffect, useState } from "react";
-import Mobile from "../Mobile/Mobile";
+import React from "react";
 
-const Otp = ({ validate }) => {
-  const [otpStatus, setOtpStatus] = useState(false);
-
-  //   useEffect(() => {
-  //     document.getElementById("continue").disabled = true;
-  //   }, []);
-
-  if (otpStatus) {
-    return <Mobile />;
-  }
-
-  const foo = () => {
-    setOtpStatus(true);
-  };
-
+const Otp = ({ validate, otpCred }) => {
   return (
     <div>
       <h2>Almost There</h2>
       <p>
-        Please enter the 6 digit OTP that we just sent on anjalicuh909@gmail.com
+        Please enter the 6 digit OTP that we just sent on{" "}
+        {otpCred.type === "e" ? otpCred.i : "+91 " + otpCred.i}
       </p>
       <div className="otp-box">
         <input type="text" id="otp1" maxLength="1" />

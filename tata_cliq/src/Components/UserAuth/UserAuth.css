@@ -1,0 +1,36 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+#pop-up {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 450px;
+  height: 550px;
+  padding: 70px 30px;
+  background: rgb(65, 161, 161);
+  box-shadow: 2px 2px 5px 5px rgba(0 0 0 0.15);
+  border-radius: 40px;
+}
+#pop-up .close-btn {
+  position: absolute;
+  font-size: 30px;
+  font-weight: bold;
+  top: 15px;
+  right: 15px;
+  width: 35px;
+  height: 35px;
+  color: rgb(73, 72, 72);
+  text-align: center;
+  line-height: 15px;
+  border-radius: 15px;
+  cursor: pointer;
+}
+.pop {
+  width: 350px;
+  padding: 0 0 0 41px;
+  text-align: center;
+}
