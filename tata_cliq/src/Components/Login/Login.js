@@ -33,7 +33,7 @@ const Login = (setToken) => {
     <div className="login-wrapper">
       <h1>Please Log In</h1>
       <form id="myForm">
-        <input type="email" id="email" placeholder="Enter email" />
+        <input type="email" id="email" placeholder="Email" />
         <input type="password" id="password" placeholder="password" />
         <button onClick={login}>Login</button>
       </form>

@@ -1,6 +1,6 @@
 import React from "react";
 
-const Mobile = ({ validate, toggleAuthType }) => {
+const Mobile = ({ validate, toggleAuthType, x }) => {
   return (
     <div>
       <p>Please enter your mobile number</p>
@@ -14,13 +14,17 @@ const Mobile = ({ validate, toggleAuthType }) => {
         onChange={validate}
       />
       <br />
-      <button
-        onClick={() => {
-          toggleAuthType("email");
-        }}
-      >
-        Use Email Address
-      </button>
+      {x === 0 ? (
+        <button
+          onClick={() => {
+            toggleAuthType("email");
+          }}
+        >
+          Use Email Address
+        </button>
+      ) : (
+        <></>
+      )}
       <br />
     </div>
   );

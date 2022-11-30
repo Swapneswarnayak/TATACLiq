@@ -1,6 +1,21 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
+import Mobile from "../Mobile/Mobile";
 
-const Otp = () => {
+const Otp = ({ validate }) => {
+  const [otpStatus, setOtpStatus] = useState(false);
+
+  //   useEffect(() => {
+  //     document.getElementById("continue").disabled = true;
+  //   }, []);
+
+  if (otpStatus) {
+    return <Mobile />;
+  }
+
+  const foo = () => {
+    setOtpStatus(true);
+  };
+
   return (
     <div>
       <h2>Almost There</h2>
@@ -13,7 +28,7 @@ const Otp = () => {
         <input type="text" id="otp3" maxLength="1" />
         <input type="text" id="otp4" maxLength="1" />
         <input type="text" id="otp5" maxLength="1" />
-        <input type="text" id="otp6" maxLength="1" />
+        <input type="text" id="otp6" maxLength="1" onChange={validate} />
       </div>
 
       <div>

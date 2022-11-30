@@ -2,6 +2,18 @@ var initialData = {
   users: [],
 };
 
-export const userReducer = (storeData = initialData, action) => {
-  return storeData;
+const userReducer = (storeData = initialData, action) => {
+  switch (action.type) {
+    case "USERS": {
+      return {
+        ...storeData,
+        users: action.payload,
+      };
+    }
+    default: {
+      return storeData;
+    }
+  }
 };
+
+export default userReducer;

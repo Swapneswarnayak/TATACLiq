@@ -1,8 +1,12 @@
 import { useState } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import "./App.css";
 
-// import Otp from "./Components/Otp/Otp";
+import "./App.css";
+import Dashboard from "./Components/Dashboard/Dashboard";
+import Login from "./Components/Login/Login";
+import Nav from "./Components/Nav/Nav";
+import Otp from "./Components/Otp/Otp";
+import Preferences from "./Components/Preferences/Preferences";
 import UserAuth from "./Components/UserAuth/UserAuth";
 
 function App() {
@@ -14,17 +18,13 @@ function App() {
 
   return (
     <div className="App">
-      {/* <h1>Application</h1>
       <BrowserRouter>
         <Routes>
-          <Route path="/dashboard" element={<Dashboard />} />
+          <Route path="/" element={<Nav />} />
 
-          <Route path="/preferences" element={<Preferences />} />
+          <Route path="/authenticate" element={<UserAuth />} />
         </Routes>
-      </BrowserRouter> */}
-
-      <UserAuth />
-      {/* <Otp /> */}
+      </BrowserRouter>
     </div>
   );
 }

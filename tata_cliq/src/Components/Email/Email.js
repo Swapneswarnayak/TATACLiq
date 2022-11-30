@@ -8,7 +8,7 @@ const Email = ({ validate, toggleAuthType }) => {
       <br />
       <input
         type="email"
-        placeholder="Email Address"
+        placeholder="Enter Email Address"
         className="email"
         onChange={validate}
       />

@@ -2,13 +2,8 @@
   "users": [
     {
       "id": 0,
-      "username": "abc@xuni.cat",
-      "password": "123"
-    },
-    {
-      "email": "abc@gmail.com",
-      "password": "123",
-      "id": 1
+      "email": "damin@xuni.cat",
+      "mobile": "123"
     }
   ]
 }
