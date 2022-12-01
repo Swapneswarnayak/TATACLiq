@@ -1,0 +1,17 @@
+.side-list {
+  list-style: none;
+}
+
+.links {
+  text-decoration: none;
+  color: black;
+}
+
+li {
+  margin-top: 10px;
+}
+
+.myaccount-div {
+  display: flex;
+  justify-content: space-between;
+}

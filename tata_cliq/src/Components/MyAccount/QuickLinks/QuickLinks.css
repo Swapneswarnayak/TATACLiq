@@ -1,0 +1,17 @@
+.ql-ul {
+  list-style: none;
+  display: flex;
+}
+
+.ql-ul > li {
+  margin-left: 80px;
+}
+
+.quick-links {
+  text-decoration: none;
+  color: black;
+}
+
+.content-div{
+  margin-top: 60px;
+}

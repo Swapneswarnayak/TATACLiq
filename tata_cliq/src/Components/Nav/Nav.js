@@ -5,6 +5,8 @@ const Nav = () => {
   return (
     <div>
       <Link to="/authenticate">Login/Register</Link>
+      <br />
+      <Link to="/myaccount">My Account</Link>
     </div>
   );
 };

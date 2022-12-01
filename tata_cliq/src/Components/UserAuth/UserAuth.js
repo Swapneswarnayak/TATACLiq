@@ -21,6 +21,7 @@ const UserAuth = () => {
     document.getElementById("continue").disabled = true;
     if (usersData.length === 0) {
       getUsersData();
+      sessionStorage.setItem("loggedIn", JSON.stringify({}));
     }
   });
 
@@ -73,6 +74,7 @@ const UserAuth = () => {
       document.getElementById("continue").disabled = false;
     } else if (authType === "success") {
       document.getElementById("continue").style.display = "none";
+      document.getElementById("pink").style.display = "none";
     }
   };
 
@@ -120,6 +122,16 @@ const UserAuth = () => {
       toggleAuthType("otp");
     } else if (stage === 2) {
       setStage(3);
+
+      const idenTf = usersData.filter((elem) => {
+        if (otpCred.current.type === "m") {
+          return elem.mobile === otpCred.current.i;
+        } else {
+          return elem.email === otpCred.current.i;
+        }
+      });
+      console.log(idenTf[0]);
+      sessionStorage.setItem("loggedIn", JSON.stringify(idenTf[0]));
       toggleAuthType("success");
     }
   };
