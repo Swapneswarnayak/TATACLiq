@@ -5,9 +5,12 @@
     background-color: hsl(0,0%,96%)
 }
 .firstpart>div{
-    padding: 30px;
+    padding: 50px;
     /* border: 2px solid red; */
     color:hsl(0, 0%, 0%);
+}
+.firstpart>div>h6{
+    margin-bottom: 0px;
 }
 
 .secondPart{
@@ -134,8 +137,8 @@ li{
     margin: auto;
 
     /* border: 2px solid rgb(18, 200, 39); */
-    height: 70%;
-    width: 15%;  
+    height:30px;
+    width: 13%;  
 }
 
 .lastPart{
@@ -143,6 +146,9 @@ li{
     width: 85%;
     display: block;
     margin: auto;
+}
+h6{
+    margin-bottom: 20px;
 }
 
 

@@ -1,10 +1,12 @@
 import Footer from "./Components/Footer/Footer";
-import {RiFacebookBoxFill} from 'react-icons/fa';
+import Home from "./Components/Home/Home"
 
 function App() {
 
   return (
     <div className="App">
+   
+       <Home/>
      <Footer/>
     </div>
   );

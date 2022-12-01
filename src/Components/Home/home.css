@@ -1,0 +1,230 @@
+.firstCon{
+    height: 400px;
+    width: 100%;  
+}
+.smallimg{
+    display: flex;
+    margin-top: 50px;
+    height: 120px;
+    background-color: hsl(0,0%,93%);
+    width: 100%;    
+}
+.smallimg>div{
+    margin: auto;
+    height: 110px;
+    width:8%;  
+}
+img{
+    height: 80px;
+    width: 100%;  
+}
+.brende,.smallb,.smalld{ 
+    margin:auto;
+    display: block;
+    height: 160px;
+    width: 80%;
+    margin-top: 100px;   
+}
+.smalle{
+    margin:auto;
+    display: block;
+    height: 160px;
+    width: 80%;
+    margin-top: 100px;
+    margin-bottom: 150px;   
+}
+.smalla{
+    margin:auto;
+    display: block;
+    height: 140px;
+    width: 100%;
+    margin-top: 60px;
+}
+.smallc{
+    margin: auto;
+    display: block;
+    height: 360px;
+    width: 80%;
+    margin-top: 50px;
+    
+}
+.brenda,.brendc,.brendd,.brendf{
+    display: flex;
+    margin: auto;
+    height: 400px;
+    width: 70%;
+    margin-top: 60px;  
+}
+img{
+height:100%;
+}
+.brendf>div{
+    margin: auto;
+    height: 340px;
+    width: 23.5%;
+}
+.brenda>div{
+    margin: auto;
+    height: 340px;
+    width: 23.5%;
+}
+
+.brenda img:hover{
+    -ms-transform: scale(1.03); 
+    -webkit-transform: scale(1.03); 
+    transform: scale(1.03);
+}
+.brenda img{
+    transition: .8s;
+}
+
+.brendf img:hover{
+    -ms-transform: scale(1.03); 
+    -webkit-transform: scale(1.03); 
+    transform: scale(1.03);
+}
+.brendf img{
+    transition: .8s;
+}
+
+.brendb,.brendh,.brendl,.brendn{
+    margin: auto;
+    height: 150px;
+    width: 80%;
+    margin-top: 80px;   
+}
+
+.brendi,.brendj,.brendk,.brendo{
+   margin: auto;
+  
+    display: flex;
+    height: 400px;
+    width: 83%;
+    margin-top: 60px;
+  
+}
+.brendi img:hover{
+    -ms-transform: scale(1.03); 
+    -webkit-transform: scale(1.03); 
+    transform: scale(1.03);
+}
+.brendi img{
+    transition: .8s;
+}
+.brendj img:hover{
+    -ms-transform: scale(1.03); 
+    -webkit-transform: scale(1.03); 
+    transform: scale(1.03);
+}
+.brendj img{
+    transition: .8s;
+}
+.brendk img:hover{
+    -ms-transform: scale(1.03); 
+    -webkit-transform: scale(1.03); 
+    transform: scale(1.03);
+}
+.brendk img{
+    transition: .8s;
+}
+.brendo img:hover{
+    -ms-transform: scale(1.03); 
+    -webkit-transform: scale(1.03); 
+    transform: scale(1.03);
+}
+.brendo img{
+    transition: .8s;
+}
+.brendg{
+    margin: auto;
+    display: block;
+    height: 360px;
+    width: 80%;
+    margin-top: 40px;
+    
+}
+.brendg>div{
+    margin: auto;
+    height: 250px;
+    width: 30%;
+   
+}
+.brendi>div{
+    margin: auto;
+    height: 380px;
+    width: 48%;
+   
+}
+.brendj>div{
+    margin: auto;
+    height: 380px;
+    width: 48%;
+    
+}
+.brendk>div{
+    margin: auto;
+    height: 380px;
+    width: 48%;
+    
+}
+.brend>div{
+    margin: auto;
+    height: 250px;
+    width: 30%;
+    
+}
+.brendo>div{
+    margin: auto;
+    height: 380px;
+    width: 48%;
+    
+}
+/* Carouselcss here */
+
+
+.mapA,.mapB,.mapC,.mapD{
+     margin: auto;
+      padding: 0px 5px 0px 5px;
+     
+      width: 70%;
+      height: 350px;
+     
+}
+.mapA img:hover{
+        -ms-transform: scale(1.03); 
+        -webkit-transform: scale(1.03); 
+        transform: scale(1.03);
+    }
+    
+    .mapA img{
+        transition: .8s;
+    }
+
+    .mapB img:hover{
+        -ms-transform: scale(1.03); 
+        -webkit-transform: scale(1.03); 
+        transform: scale(1.03);
+    }
+    
+    .mapB img{
+        transition: .8s;
+    }
+    .mapC img:hover{
+        -ms-transform: scale(1.03); 
+        -webkit-transform: scale(1.03); 
+        transform: scale(1.03);
+    }
+    
+    .mapC img{
+        transition: .8s;
+    }
+    .mapD img:hover{
+        -ms-transform: scale(1.03); 
+        -webkit-transform: scale(1.03); 
+        transform: scale(1.03);
+    }
+    
+    .mapD img{
+        transition: .8s;
+    }
+    
