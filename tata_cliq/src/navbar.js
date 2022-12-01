@@ -1,17 +1,50 @@
 
 import "./NavBar.css"
 import {Link, Routes, Route} from "react-router-dom"
+import SigninSignup from './SignIn_Signup/Signin_Signup_page';
+import {ChevronDownIcon} from '@chakra-ui/icons'
+import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
+import {faHeart} from '@fortawesome/free-regular-svg-icons';
+import {faFolder} from '@fortawesome/free-regular-svg-icons';
+import {useState} from 'react';
+{/* <script src="https://kit.fontawesome.com/e68ecfb53d.js" crossorigin="anonymous"></script> */}
 
 function NavBar(){
+    const [wishlistlen, setwishlistlen] = useState(1);
+    const [cartlen , setcartlen] = useState(1)
+    const [current , setcurrent] = useState(false);
+    const [text , setText] = useState("");
 
     const linkstyle = {
         textDecoration: "none",
         color : "gray",
     }
+    console.log(text);
+
+    const products= ["shirts","formal-shirts","t-shirts","socks","formal-shirts","shoes","shoes-sneakers","shoes-formal","shoes-heels"];
+
+
+    function handinginputbox(){
+
+        if(text.length > 1){
+            setcurrent(true)
+        }
+        
+        if(text.length == 1){
+            setcurrent(false)
+        }
+
+        if(text == ""){
+            setcurrent(false);
+        }
+    }
+
+
+
     return <>
     <div id="main_navbar">
         <div id="navbar_left_box">
-            <img id="img_of_logo" src="http://www.pngimagesfree.com/LOGO/T/Tata-CLiQ/Tata-cliq-logo-PNG-White.png"></img>
+           <Link to="/"> <img id="img_of_logo" src="http://www.pngimagesfree.com/LOGO/T/Tata-CLiQ/Tata-cliq-logo-PNG-White.png"></img></Link>
         </div>
         <div id="navbar_right_box">
             <div id="right_upper_box">
@@ -25,13 +58,16 @@ function NavBar(){
                     <div><h1 className="upper_boxof_navbar_h1">Gift Card</h1></div>
                     <div><h1 className="upper_boxof_navbar_h1">CLiq Care</h1></div>
                     <div><h1 className="upper_boxof_navbar_h1">Track Orders</h1></div>
-                    <div><h1 className="upper_boxof_navbar_h1">Sign in / Sign Up</h1></div>
+                    <div><SigninSignup /></div>
                 </div>
             </div>
             <div id="right_lower_box">
                 <div className="right_lower_box_first">
                     <div className="right_lower_box_first_first">
-                        <h1 className="lowerboxof_navbar_category" id="category_box">Categories</h1>
+                        <div id="category_box_arrow">
+                            <div><h1 className="lowerboxof_navbar_category" id="category_box">Categories</h1></div>
+                            <div id="category_box_arrow_arrow"><h1><ChevronDownIcon  /></h1></div>
+                        </div>
 
                         <div className="dropdown-menu-category">
                         <div className="dropdown-menu-category-first">
@@ -527,7 +563,14 @@ function NavBar(){
                 </div>
                 <div className="right_lower_box_second">
                        <div className="right_lower_box_second_first">
-                           <h1 className="lowerboxof_navbar_brand" id="brand_box">Brands</h1>
+                           {/* <h1 className="lowerboxof_navbar_brand" id="brand_box">Brands</h1> */}
+                           <div id="brand_box_arrow">
+                            <div><h1 className="lowerboxof_navbar_brand" id="brand_box">Brands</h1></div>
+                            <div id="brand_box_arrow_arrow"><h1><ChevronDownIcon  /></h1></div>
+                            </div>
+
+
+
                            <div className="dropdown-menu-category-brands">
                            <div className="dropdown-menu-category-brands-first">
 <div className="dropdown-menu-category-brands-first-first h5-tag"><p>Women's Wear</p></div>
@@ -567,24 +610,24 @@ function NavBar(){
            <div className="a-a" ><Link style={linkstyle}><a>United color</a></Link></div>
            <div className="a-a" ><Link style={linkstyle}><a>Globus</a></Link></div>
         </div>
-        <div>
-            <div>
-                <img></img>
+        <div className="third_box_of_brands_extension">
+            <div >
+                <img className="third_box_of_brands_extension_div" src="https://assets.tatacliq.com/medias/sys_master/images/13999033614366.png"></img>
+            </div>
+            <div >
+                <img className="third_box_of_brands_extension_div" src="https://assets.tatacliq.com/medias/sys_master/images/13999033843742.png"></img>
+            </div>
+            <div >
+                <img className="third_box_of_brands_extension_div" src="https://assets.tatacliq.com/medias/sys_master/images/15140220403742.jpg"></img>
             </div>
             <div>
-                <img></img>
+                <img className="third_box_of_brands_extension_div" src="https://assets.tatacliq.com/medias/sys_master/images/33013524955166.jpg"></img>
             </div>
-            <div>
-                <img></img>
+            <div >
+                <img className="third_box_of_brands_extension_div" src="https://assets.tatacliq.com/medias/sys_master/images/15963080425502.jpg"></img>
             </div>
-            <div>
-                <img></img>
-            </div>
-            <div>
-                <img></img>
-            </div>
-            <div>
-                <img></img>
+            <div >
+                <img className="third_box_of_brands_extension_div" src="https://assets.tatacliq.com/medias/sys_master/images/13999034531870.png"></img>
             </div>
         </div>
     </div>
@@ -624,24 +667,24 @@ function NavBar(){
            <div className="a-a" ><Link style={linkstyle}><a>parx</a></Link></div>
            <div className="a-a" ><Link style={linkstyle}><a>spykar</a></Link></div>
         </div>
-        <div>
+        <div className="third_box_of_brands_extension">
             <div>
-                <img></img>
+                <img className="third_box_of_brands_extension_div" src="https://assets.tatacliq.com/medias/sys_master/images/33013525020702.jpg"></img>
             </div>
             <div>
-                <img></img>
+                <img className="third_box_of_brands_extension_div" src="https://assets.tatacliq.com/medias/sys_master/images/33013525086238.jpg"></img>
             </div>
             <div>
-                <img></img>
+                <img className="third_box_of_brands_extension_div" src="https://assets.tatacliq.com/medias/sys_master/images/33013525151774.jpg"></img>
             </div>
             <div>
-                <img></img>
+                <img className="third_box_of_brands_extension_div" src="https://assets.tatacliq.com/medias/sys_master/images/33013525217310.jpg"></img>
             </div>
             <div>
-                <img></img>
+                <img className="third_box_of_brands_extension_div" src="https://assets.tatacliq.com/medias/sys_master/images/33013525282846.jpg"></img>
             </div>
             <div>
-                <img></img>
+                <img className="third_box_of_brands_extension_div" src="https://assets.tatacliq.com/medias/sys_master/images/33013525348382.jpg"></img>
             </div>
         </div>
     </div>
@@ -685,24 +728,24 @@ function NavBar(){
            <div className="a-a" ><Link style={linkstyle}>Leone</Link></div>
            <div className="a-a" ><Link style={linkstyle}>Clarks</Link></div>
         </div>
-        <div>
+        <div className="third_box_of_brands_extension">
             <div>
-                <img></img>
+                <img className="third_box_of_brands_extension_div" src= "https://assets.tatacliq.com/medias/sys_master/images/33013525413918.jpg"></img>
             </div>
             <div>
-                <img></img>
+                <img className="third_box_of_brands_extension_div" src= "https://assets.tatacliq.com/medias/sys_master/images/33013525479454.jpg"></img>
             </div>
             <div>
-                <img></img>
+                <img className="third_box_of_brands_extension_div" src="https://assets.tatacliq.com/medias/sys_master/images/33013525544990.jpg"></img>
             </div>
             <div>
-                <img></img>
+                <img className="third_box_of_brands_extension_div" src="https://assets.tatacliq.com/medias/sys_master/images/14003109986334.jpg"></img>
             </div>
             <div>
-                <img></img>
+                <img className="third_box_of_brands_extension_div" src="https://assets.tatacliq.com/medias/sys_master/images/33013525610526.jpg"></img>
             </div>
             <div>
-                <img></img>
+                <img className="third_box_of_brands_extension_div" src="https://assets.tatacliq.com/medias/sys_master/images/33013525676062.jpg"></img>
             </div>
         </div>
     </div>
@@ -741,24 +784,18 @@ function NavBar(){
            <div className="a-a" ><Link style={linkstyle}><a>London</a></Link></div>
            <div className="a-a" ><Link style={linkstyle}><a>real effect</a></Link></div>
         </div>
-        <div>
+        <div className="third_box_of_brands_extension">
             <div>
-                <img></img>
+                <img  className="third_box_of_brands_extension_div" src="https://assets.tatacliq.com/medias/sys_master/images/26759829979166.jpg"></img>
             </div>
             <div>
-                <img></img>
+                <img className="third_box_of_brands_extension_div"  src="https://assets.tatacliq.com/medias/sys_master/images/13957515968542.jpg"></img>
             </div>
             <div>
-                <img></img>
+                <img className="third_box_of_brands_extension_div"  src= "https://assets.tatacliq.com/medias/sys_master/images/13957516165150.jpg"></img>
             </div>
             <div>
-                <img></img>
-            </div>
-            <div>
-                <img></img>
-            </div>
-            <div>
-                <img></img>
+                <img className="third_box_of_brands_extension_div"  src="https://assets.tatacliq.com/medias/sys_master/images/13957516099614.jpg"></img>
             </div>
         </div>
     </div>
@@ -804,24 +841,24 @@ function NavBar(){
            <div className="a-a" ><Link style={linkstyle}>Timex</Link></div>
            <div className="a-a" ><Link style={linkstyle}>kklien</Link></div>
         </div>
-        <div>
+        <div className="third_box_of_brands_extension">
             <div>
-                <img></img>
+                <img className="third_box_of_brands_extension_div" src="https://assets.tatacliq.com/medias/sys_master/images/33013525741598.jpg"></img>
             </div>
             <div>
-                <img></img>
+                <img className="third_box_of_brands_extension_div" src="https://assets.tatacliq.com/medias/sys_master/images/33013525807134.jpg"></img>
             </div>
             <div>
-                <img></img>
+                <img className="third_box_of_brands_extension_div" src="https://assets.tatacliq.com/medias/sys_master/images/33013525872670.jpg"></img>
             </div>
             <div>
-                <img></img>
+                <img className="third_box_of_brands_extension_div" src="https://assets.tatacliq.com/medias/sys_master/images/33013525938206.jpg"></img>
             </div>
             <div>
-                <img></img>
+                <img className="third_box_of_brands_extension_div" src="https://assets.tatacliq.com/medias/sys_master/images/33013526003742.jpg"></img>
             </div>
             <div>
-                <img></img>
+                <img className="third_box_of_brands_extension_div" src="https://assets.tatacliq.com/medias/sys_master/images/33013526069278.jpg"></img>
             </div>
         </div>
     </div>
@@ -831,10 +868,37 @@ function NavBar(){
                         </div>
                 </div>
                 <div className="right_lower_box_third">
-                    <input className="right_lower_box_third_input_box"></input>
+
+                    <input className= {current ? "right_lower_box_third_input_box whiteoninput" : "right_lower_box_third_input_box"}  onChange={(event)=>{
+                        setText(event.target.value);
+                        handinginputbox();
+                    }}></input>
+
+
+                    <div className = {current ? "hidden_box displayblock" : "hidden_box displayNOne"}>
+
+                         {
+                           products.map((elem)=>{
+                         return <>{elem.includes(text) ? <div className="inputdrop"><h1>{elem}</h1></div> : null}</>
+                            })
+                         }
+                    </div>
+
+
                 </div>
-                <div>
-                    <h1 className="lowerboxof_navbar_dropdown">icons</h1>
+                <div className="fourth_lower_box">
+                    <div>
+                        <div><h1 className="icon_heart"><FontAwesomeIcon icon={faHeart} /></h1></div>
+                        {
+                            wishlistlen > 0 ? <div className="redround heart_icon"><Link to="/wishlist"><h4>{wishlistlen}</h4></Link></div> : null
+                        }
+                    </div>
+                    <div>
+                        <div><h1 className="icon_heart"><FontAwesomeIcon icon={faFolder} /></h1></div>
+                        {
+                            cartlen > 0 ? <div className="redround bag_icon"><Link to="/cart"><h4>{cartlen}</h4></Link></div> : null
+                        }
+                    </div>
                 </div>
             </div>
         </div>
@@ -842,5 +906,7 @@ function NavBar(){
     </>
 }
 
+
 export default NavBar;
+
 
