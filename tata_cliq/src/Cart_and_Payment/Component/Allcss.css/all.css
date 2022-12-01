@@ -72,6 +72,9 @@
         display: flex;
         justify-content: center;
         
+        
+        /* background-color: #ECECEC; */
+        
     }
   }
 
@@ -79,8 +82,11 @@
 
 
 .cart_container{
-    height: 100vh;
+    height: auto;
     background-color: #ECECEC;
+    padding-bottom: 50px;
+    
+    
 }
 
 
@@ -88,19 +94,25 @@
     /* background-color: #fff; */
     /* float: left; */
     text-align: left;
-    margin: 20px 0px 10px 70px;
+    /*  */
+    font-size: 14px;
+    background-color: #ECECEC;
     
 }
 .para p{
     display: block;
+    padding: 20px 0px 10px 70px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
 
+/* Cart Card Section start */
+
 .Cartbox{
-    /* background-color: aqua; */
-    width: 60%;
+    width: 90%;
     height: 200px;
     margin: 20px 0px 10px 70px;
+    border-radius: 8px;
     display: flex;
     padding: 10px;
     background-color: white;
@@ -109,7 +121,6 @@
 
 
 .cart_image{
-    /* background-color: bisque; */
     width: 20%;
 }
 .cart_image img{
@@ -117,7 +128,6 @@
     margin: auto;
 }
 .cart_data{
-    /* background-color: brown; */
     width: 80%;
 }
 .cart_data p{
@@ -125,7 +135,6 @@
     display:inline;
 }
 .cart_data>div:nth-child(1){
-    /* background-color: rgb(31, 220, 28); */
     height: 70%;
     display: flex;
     
@@ -133,21 +142,42 @@
 .cart_data img{
     display:inline;
     margin-right: 7px;
-    /* margin-top: 10px; */
 }
 .cart_data>div:nth-child(1)>div:nth-child(1){
-    /* background-color: rgb(169, 112, 112); */
+ 
     width: 60%;
     padding: 10px;
     
 }
 .cart_data>div:nth-child(1)>div:nth-child(2){
-    /* background-color: rgb(27, 218, 189); */
+   
     width: 45%;
     padding: 10px;
     
 }
 .cart_data>div:nth-child(2){
-    /* background-color: rgb(20, 121, 209); */
+  
     height: 30%;
+}
+/* card ends-------------------> */
+
+
+
+.Cart_Show_multi{
+    width: 70%;
+    padding-bottom: 70px;
+}
+
+
+/* Checkout section start------------> */
+
+.Cart_show_checkout{
+    /* background-color: chartreuse; */
+    width: 28%;
+    padding: 20px;
+}
+#coupon{
+    /* background-color: aqua; */
+    width: 100%;
+    
 }

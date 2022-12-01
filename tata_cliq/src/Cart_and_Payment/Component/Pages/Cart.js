@@ -1,21 +1,17 @@
-import React from 'react'
-import Navbar from '../Navbar/Navbar'
-import MyBag from "../Navbar/MyBag"
-import "../Allcss.css/all.css"
-import Cartdetails from '../CartDetails/Cartdetails'
+import React from "react";
+import Navbar from "../Navbar/Navbar";
+import MyBag from "../Navbar/MyBag";
+import "../Allcss.css/all.css";
+
+import CartShow from "../CartShow/CartShow";
 const Cart = () => {
   return (
-    <div className='cart_container'>
-         <Navbar />
-        <MyBag />
-       
-    
-
-        <Cartdetails />
-        
-
+    <div>
+      <Navbar />
+      <MyBag />
+      <CartShow />
     </div>
-  )
-}
+  );
+};
 
-export default Cart
+export default Cart;
