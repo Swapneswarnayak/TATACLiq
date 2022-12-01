@@ -1,21 +1,29 @@
 import React from "react";
+import "./Mobile.css";
 
 const Mobile = ({ validate, toggleAuthType, x }) => {
   return (
-    <div>
-      <p>Please enter your mobile number</p>
-      <label>Mobile Number</label>
-      <br />
-      +91
-      <input
-        type="text"
-        placeholder="Enter Mobile Number"
-        className="mobile"
-        onChange={validate}
-      />
+    <div id="Mobile">
+      <p id="EnterMobile">Please enter your mobile number</p>
+
+      {/* <p>+91</p> */}
+      <div class="form">
+        <input
+          type="text"
+          placeholder=""
+          className="mobile"
+          required
+          onChange={validate}
+        />
+        <label for="name" class="label-name">
+          <span class="content-name">Mobile Number</span>
+        </label>
+      </div>
+
       <br />
       {x === 0 ? (
         <button
+          id="use-email"
           onClick={() => {
             toggleAuthType("email");
           }}

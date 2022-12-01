@@ -151,6 +151,14 @@ const UserAuth = () => {
         <AuthSuccess validate={validate} />
       )}
 
+      <br />
+      <br />
+      <p id="pink">
+        By continuing, you agree to our{" "}
+        <span style={{ color: "#da1c5c" }}>Terms of Use</span> and{" "}
+        <span style={{ color: "#da1c5c" }}>Privacy Policy</span>
+      </p>
+
       <button id="continue" onClick={foo}>
         Continue
       </button>

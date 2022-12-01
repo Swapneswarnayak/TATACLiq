@@ -1,19 +1,29 @@
 import React from "react";
+import "./Email.css";
 
 const Email = ({ validate, toggleAuthType }) => {
   return (
-    <div>
-      <p>Please enter your email address</p>
-      <label>E-mail address</label>
+    <div id="Email">
+      <p id="EnterEmail">Please enter your email address</p>
+
       <br />
-      <input
-        type="email"
-        placeholder="Enter Email Address"
-        className="email"
-        onChange={validate}
-      />
+      <div class="form">
+        <input
+          type="email"
+          placeholder=""
+          className="email"
+          autoComplete="off"
+          required
+          onChange={validate}
+        />
+        <label for="name" class="label-name">
+          <span class="content-name">E-mail Address</span>
+        </label>
+      </div>
       <br />
+
       <button
+        id="use-mobile"
         onClick={() => {
           toggleAuthType("mobile");
         }}

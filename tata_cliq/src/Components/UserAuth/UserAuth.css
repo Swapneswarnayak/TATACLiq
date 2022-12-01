@@ -9,11 +9,12 @@
   left: 50%;
   transform: translate(-50%, -50%);
   width: 450px;
-  height: 550px;
+  height: 620px;
   padding: 70px 30px;
-  background: rgb(65, 161, 161);
+  background: #fff;
   box-shadow: 2px 2px 5px 5px rgba(0 0 0 0.15);
   border-radius: 40px;
+  border: 1px solid teal;
 }
 #pop-up .close-btn {
   position: absolute;
@@ -33,4 +34,30 @@
   width: 350px;
   padding: 0 0 0 41px;
   text-align: center;
+}
+.pop > h1 {
+  font-size: 32px;
+  font-weight: 700;
+  font-family: "Overpass", sans-serif !important;
+  color: #212121;
+}
+
+#pink {
+  font-weight: light;
+  font-size: 13px;
+  width: 300px;
+  margin-left: 40px;
+}
+span {
+  font-weight: 600;
+}
+#continue {
+  margin-top: 20px;
+  font-size: 20px;
+  padding: 10px 20px;
+  width: 80%;
+  border-radius: 10px;
+  background-color: #e0e1e3;
+  color: rgb(249, 247, 247);
+  border: none;
 }
