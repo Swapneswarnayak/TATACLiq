@@ -1,13 +1,14 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import "./Sidebar.css";
 
 const Sidebar = () => {
   return (
     <div>
       <div className="sidebar">
-        <div>Menu</div>
+        <div className="menu">Menu</div>
         <ul className="side-list">
-          <li>
+          <li className="li">
             <Link className="links">
               <i className="fa-regular fa-heart"></i>&emsp;My Wishlist
             </Link>

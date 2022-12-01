@@ -4,7 +4,7 @@ import "./AccountDetails.css";
 const AccountDetails = () => {
   const loggedIn = JSON.parse(sessionStorage.getItem("loggedIn"));
   return (
-    <div>
+    <div className="account">
       <img
         className="acc-img"
         src="https://p.kindpng.com/picc/s/78-785904_block-chamber-of-commerce-avatar-white-avatar-icon.png"

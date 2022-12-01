@@ -59,6 +59,9 @@ const UserAuth = () => {
       const mailformat = /^\w+([.-]?\w+)*@\w+([.-]?\w+)*(\.\w{2,3})+$/;
       if (email.match(mailformat)) {
         document.getElementById("continue").disabled = false;
+
+        document.getElementById("continue").style.backgroundImage =
+          "linear-gradient(to bottom right, #89216b, #da4453)";
       } else {
         document.getElementById("continue").disabled = true;
       }

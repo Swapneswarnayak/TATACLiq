@@ -5,9 +5,9 @@ const Mobile = ({ validate, toggleAuthType, x }) => {
   return (
     <div id="Mobile">
       <p id="EnterMobile">Please enter your mobile number</p>
-
+      <br />
       {/* <p>+91</p> */}
-      <div class="form">
+      <div className="form">
         <input
           type="text"
           placeholder=""
@@ -15,7 +15,7 @@ const Mobile = ({ validate, toggleAuthType, x }) => {
           required
           onChange={validate}
         />
-        <label for="name" class="label-name">
+        <label for="name" className="label-name">
           <span class="content-name">Mobile Number</span>
         </label>
       </div>

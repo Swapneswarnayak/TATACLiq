@@ -7,7 +7,7 @@ const Email = ({ validate, toggleAuthType }) => {
       <p id="EnterEmail">Please enter your email address</p>
 
       <br />
-      <div class="form">
+      <div className="form">
         <input
           type="email"
           placeholder=""
@@ -16,7 +16,7 @@ const Email = ({ validate, toggleAuthType }) => {
           required
           onChange={validate}
         />
-        <label for="name" class="label-name">
+        <label for="name" className="label-name">
           <span class="content-name">E-mail Address</span>
         </label>
       </div>

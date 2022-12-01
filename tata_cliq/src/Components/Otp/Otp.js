@@ -1,24 +1,25 @@
 import React from "react";
+import "./Otp.css";
 
 const Otp = ({ validate, otpCred }) => {
   return (
     <div>
-      <h2>Almost There</h2>
+      <h1 className="there">Almost There</h1>
       <p>
         Please enter the 6 digit OTP that we just sent on{" "}
         {otpCred.type === "e" ? otpCred.i : "+91 " + otpCred.i}
       </p>
       <div className="otp-box">
-        <input type="text" id="otp1" maxLength="1" />
-        <input type="text" id="otp2" maxLength="1" />
-        <input type="text" id="otp3" maxLength="1" />
-        <input type="text" id="otp4" maxLength="1" />
-        <input type="text" id="otp5" maxLength="1" />
-        <input type="text" id="otp6" maxLength="1" onChange={validate} />
+        <input type="text" className="otp" maxLength="1" />
+        <input type="text" className="otp" maxLength="1" />
+        <input type="text" className="otp" maxLength="1" />
+        <input type="text" className="otp" maxLength="1" />
+        <input type="text" className="otp" maxLength="1" />
+        <input type="text" className="otp" maxLength="1" onChange={validate} />
       </div>
 
-      <div>
-        <button>Edit Email</button>
+      <div id="Resend">
+        <button>Edit Number</button>
         <button>Resend OTP</button>
       </div>
     </div>

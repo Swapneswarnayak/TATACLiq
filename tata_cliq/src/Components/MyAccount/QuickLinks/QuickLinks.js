@@ -22,24 +22,25 @@ const QuickLinks = () => {
           <Link className="quick-links">Coupons</Link>
         </li>
       </ul>
+      <hr className="hr" />
 
       <div className="order-history">
         <div className="content-div">
-          <span>Show orders from:</span>
-          <select>
-            <option>Last 6 months</option>
+          <span className="span">Show orders from : </span>
+          <select className="select-div">
+            <option>Last 6 months </option>
             <option>2022</option>
             <option>2021</option>
             <option>2020</option>
           </select>
         </div>
 
-        <div className="content-div">
+        <div className="content-div1">
           <p>You have not made any purchase yet</p>
         </div>
 
         <div className="content-div">
-          <button>Continue Shopping</button>
+          <button className="button">Continue Shopping</button>
         </div>
       </div>
     </div>

@@ -12,6 +12,7 @@ li {
 }
 
 .myaccount-div {
+  margin: auto;
+  display: block;
   display: flex;
-  justify-content: space-between;
 }
