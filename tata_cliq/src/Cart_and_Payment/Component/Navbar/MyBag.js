@@ -20,9 +20,7 @@ const MyBag = () => {
         
         
     </div>
-     <div className='para'>
-     <p >Apply a relevant coupon code here to avail any additional discount. Applicable cashback if any will be credited to your account as per T&C.</p>
-     </div>
+     
      </>
   )
 }

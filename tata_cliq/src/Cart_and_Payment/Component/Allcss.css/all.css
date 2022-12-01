@@ -159,6 +159,9 @@
   
     height: 30%;
 }
+.Wishlist,.Wishlist p:hover{
+    cursor: pointer;
+}
 /* card ends-------------------> */
 
 

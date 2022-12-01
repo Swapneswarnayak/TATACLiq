@@ -1,8 +1,15 @@
 import React from "react";
 import "./Checkout.css";
 import { Button, ButtonGroup } from "@chakra-ui/react";
+import { Link } from "react-router-dom";
+const Checkout = (props) => {
+  let { val, fn } = props;
+  console.log(fn);
 
-const Checkout = () => {
+
+  const ToAddress=()=>{
+    fn(true)
+  }
   return (
     <div id="check">
       <div className="check_name">
@@ -36,23 +43,46 @@ const Checkout = () => {
       </p>
       <hr />
       <div id="check_total">
-        <div>
-          <h1 style={{ fontSize: "20px" }}>
-            <b>Total</b>
-          </h1>
-          <h1 style={{ fontSize: "20px" }}>₹ 7445</h1>
-        </div>
-        <div>
-          <Button size="lg" variant="outline" colorScheme="red">
-            Checkout
-            <img
-              style={{ margin: "auto" }}
-              width={"60px"}
-              src="https://thumbs.gfycat.com/CompleteShallowFlyingsquirrel-size_restricted.gif"
-              alt="cartmove"
-            />
-          </Button>
-        </div>
+        {val ? (
+          <>
+            <div>
+              <h1 style={{ fontSize: "20px" }}>
+                <b>Total Payable Amount</b>
+              </h1>
+            </div>
+            <div>
+              <h1 style={{ fontSize: "25px" }}>₹5000.00</h1>
+              <img
+                style={{ marginTop: "-8px" }}
+                width={"60px"}
+                src="https://thumbs.gfycat.com/CompleteShallowFlyingsquirrel-size_restricted.gif"
+                alt="cartmove"
+              />
+            </div>
+          </>
+        ) : (
+          <>
+            <div>
+              <h1 style={{ fontSize: "20px" }}>
+                <b>Total</b>
+              </h1>
+              <h1 style={{ fontSize: "20px" }}>₹ 7445</h1>
+            </div>
+            <div>
+              <Link >
+                <Button onClick={ToAddress} size="lg" variant="outline" colorScheme="red">
+                  Checkout
+                  <img
+                    style={{ marginRight: "-10px" }}
+                    width={"60px"}
+                    src="https://thumbs.gfycat.com/CompleteShallowFlyingsquirrel-size_restricted.gif"
+                    alt="cartmove"
+                  />
+                </Button>
+              </Link>
+            </div>
+          </>
+        )}
       </div>
     </div>
   );

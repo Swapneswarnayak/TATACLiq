@@ -9,6 +9,8 @@ import {
   Button,
   useDisclosure,
 } from "@chakra-ui/react";
+import { ChevronRightIcon } from "@chakra-ui/icons";
+
 import React from "react";
 import { Highlight } from "@chakra-ui/react";
 import { Tabs, TabList, TabPanels, Tab, TabPanel } from "@chakra-ui/react";
@@ -29,7 +31,7 @@ export default function BasicUsage() {
           src="https://i.pinimg.com/originals/97/e2/0f/97e20f80e51dcaf17a3b78a860d8e43a.gif"
           alt="gif"
         />
-        Check For Coupons
+        Check For Coupons &nbsp;&nbsp; <ChevronRightIcon />
       </Button>
 
       <Modal isOpen={isOpen} onClose={onClose}>
@@ -60,7 +62,7 @@ export default function BasicUsage() {
                     WOW33
                   </Highlight>
                   <Button onClick={() => myFunc("WOW33")} ml={5} mb={2}>
-                    Copy Code
+                    Apply
                   </Button>
                   <p>You Save ₹300</p>
                   <br />
@@ -84,7 +86,7 @@ export default function BasicUsage() {
                     ALPHA12
                   </Highlight>
                   <Button onClick={() => myFunc("ALPHA12")} ml={5} mb={2}>
-                    Copy Code
+                    Apply
                   </Button>
                   <p>You Save ₹1000</p>
                   <br />
@@ -110,7 +112,7 @@ export default function BasicUsage() {
                     MAGIC6
                   </Highlight>
                   <Button onClick={() => myFunc("MAGIC6")} ml={5} mb={2}>
-                    Copy Code
+                    Apply
                   </Button>
                   <p>You Save ₹600</p>
                   <br />
