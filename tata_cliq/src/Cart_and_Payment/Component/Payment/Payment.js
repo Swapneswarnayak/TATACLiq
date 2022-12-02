@@ -84,7 +84,9 @@ const Payment = (props) => {
             </FormControl>
           </h1>
 
-          <Button onClick={()=>fn(4)} colorScheme="red">Pay Now</Button>
+          <Button onClick={() => fn(4)} colorScheme="red">
+            Pay Now
+          </Button>
         </div>
         <br />
       </div>

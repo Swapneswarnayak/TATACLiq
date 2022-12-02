@@ -8,7 +8,7 @@
 }
 #Delivery_Address{
     width: 100%;
-    height: 150px;
+    /* height: 150px; */
     background-color: rgb(255, 255, 255);
     margin-top: 20px;
     padding: 20px;
@@ -16,7 +16,7 @@
 }
 #Delivery_Mode{
     width: 100%;
-    height: 150px;
+    /* height: 150px; */
     background-color: rgb(255, 255, 255);
     margin-top: 20px;
     padding: 20px;

@@ -55,7 +55,7 @@ const CartPay = () => {
               </AccordionButton>
             </h2>
             <AccordionPanel pb={4}>
-              <div style={{ display: "flex", gap: "10px" }}>
+              {/* <div style={{ display: "flex", gap: "10px" }}>
                 <div style={{ width: "50%" }}>
                   <Input mb={"10px"} placeholder="Card Number*" />
 
@@ -84,7 +84,8 @@ const CartPay = () => {
                     </Button>
                   </div>
                 </div>
-              </div>
+              </div> */}
+              <img width={"100%"} src="https://acegif.com/wp-content/uploads/gifs/raining-money-8.gif" alt="honey" />
             </AccordionPanel>
           </AccordionItem>
 
@@ -315,7 +316,7 @@ const CartPay = () => {
               </AccordionButton>
             </h2>
             <AccordionPanel pb={4}>
-              <div style={{ display: "flex", gap: "10px" }}>
+              {/* <div style={{ display: "flex", gap: "10px" }}>
                 <div style={{ width: "50%" }}>
                   <Input mb={"10px"} placeholder="Card Number*" />
 
@@ -344,7 +345,8 @@ const CartPay = () => {
                     </Button>
                   </div>
                 </div>
-              </div>
+              </div> */}
+              <img width={"100%"} src="https://acegif.com/wp-content/uploads/gifs/raining-money-8.gif" alt="honey" />
             </AccordionPanel>
           </AccordionItem>
         </Accordion>

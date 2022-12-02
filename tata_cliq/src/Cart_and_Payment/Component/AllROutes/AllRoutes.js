@@ -1,11 +1,13 @@
-import React from 'react'
-import Cart from '../Pages/Cart'
+import React from "react";
+import Cart from "../Pages/Cart";
+import Success from "../../Success/Success";
 const AllRoutes = () => {
   return (
     <div>
-       <Cart />
+      {/* <Cart /> */}
+      <Success />
     </div>
-  )
-}
+  );
+};
 
-export default AllRoutes
+export default AllRoutes;

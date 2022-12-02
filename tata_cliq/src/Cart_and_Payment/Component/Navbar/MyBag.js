@@ -14,7 +14,7 @@ const MyBag = () => {
       
       <div id='bagin'>
       <p>Bhubaneswar, 751030</p>
-      <Input variant='flushed' type="text"  placeholder='Change PIN Code....' />
+      <Input variant='flushed' type="text" maxLength={"6"}  placeholder='Change PIN Code....' />
       </div>
       
         
