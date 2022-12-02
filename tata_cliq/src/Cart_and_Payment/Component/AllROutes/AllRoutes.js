@@ -4,8 +4,8 @@ import Success from "../../Success/Success";
 const AllRoutes = () => {
   return (
     <div>
-      {/* <Cart /> */}
-      <Success />
+      <Cart />
+      {/* <Success /> */}
     </div>
   );
 };

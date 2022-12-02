@@ -2,6 +2,7 @@ import React from "react";
 import Navbar from "../Navbar/Navbar";
 import MyBag from "../Navbar/MyBag";
 import "../Allcss.css/all.css";
+import Emptycart from "../NodataCart/Emptycart";
 
 import CartShow from "../CartShow/CartShow";
 const Cart = () => {
@@ -10,6 +11,7 @@ const Cart = () => {
       <Navbar />
       <MyBag />
       <CartShow />
+      {/* <Emptycart /> */}
     </div>
   );
 };

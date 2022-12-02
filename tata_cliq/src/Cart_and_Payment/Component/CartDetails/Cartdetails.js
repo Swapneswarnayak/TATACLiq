@@ -114,7 +114,7 @@ const Cartdetails = () => {
               )}
             </div>
             <div style={{ alignItem: "center" }}>
-              <Button size="xs" colorScheme="red">
+              <Button size="s" style={{padding:"5px"}} colorScheme="red">
                 <DeleteIcon /> &nbsp;
                 Remove
               </Button>

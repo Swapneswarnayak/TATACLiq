@@ -21,7 +21,7 @@ const Address = (props) => {
           <b style={{ fontSize: "20px" }}>Add Shipping Address</b>
         </div>
         <div style={{ float: "right" }}>
-          <Button size="xs" style={{ border: "0px" }} colorScheme="red">
+          <Button size="xs" style={{ padding:"10px" }} colorScheme="red">
             {" "}
             <DeleteIcon />
             &nbsp; Clear All
