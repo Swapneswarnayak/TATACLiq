@@ -6,10 +6,9 @@ const Checkout = (props) => {
   let { val, fn } = props;
   console.log(fn);
 
-
-  const ToAddress=()=>{
-    fn(true)
-  }
+  const ToAddress = () => {
+    fn(2);
+  };
   return (
     <div id="check">
       <div className="check_name">
@@ -43,7 +42,51 @@ const Checkout = (props) => {
       </p>
       <hr />
       <div id="check_total">
-        {val ? (
+        {val === 2 ? (
+          <>
+            <div>
+              <h1 style={{ fontSize: "20px" }}>
+                <b>Total Payable Amount</b>
+              </h1>
+            </div>
+            <div>
+              <h1 style={{ fontSize: "25px" }}>₹5000.00</h1>
+              <img
+                style={{ marginTop: "-8px" }}
+                width={"60px"}
+                src="https://thumbs.gfycat.com/CompleteShallowFlyingsquirrel-size_restricted.gif"
+                alt="cartmove"
+              />
+            </div>
+          </>
+        ) : val === 1 ? (
+          <>
+            <div>
+              <h1 style={{ fontSize: "20px" }}>
+                <b>Total</b>
+              </h1>
+              <h1 style={{ fontSize: "20px" }}>₹ 7445</h1>
+            </div>
+            <div>
+              <Link>
+                <Button
+                  onClick={ToAddress}
+                  size="lg"
+                  variant="outline"
+                  colorScheme="red"
+                >
+                  Checkout
+                  <img
+                    style={{ marginRight: "-10px" }}
+                    width={"60px"}
+                    src="https://thumbs.gfycat.com/CompleteShallowFlyingsquirrel-size_restricted.gif"
+                    alt="cartmove"
+                  />
+                </Button>
+              </Link>
+            </div>
+          </>
+        ) : val === 3 ? (
           <>
             <div>
               <h1 style={{ fontSize: "20px" }}>
@@ -64,22 +107,17 @@ const Checkout = (props) => {
           <>
             <div>
               <h1 style={{ fontSize: "20px" }}>
-                <b>Total</b>
+                <b>Total Payable Amount</b>
               </h1>
-              <h1 style={{ fontSize: "20px" }}>₹ 7445</h1>
             </div>
             <div>
-              <Link >
-                <Button onClick={ToAddress} size="lg" variant="outline" colorScheme="red">
-                  Checkout
-                  <img
-                    style={{ marginRight: "-10px" }}
-                    width={"60px"}
-                    src="https://thumbs.gfycat.com/CompleteShallowFlyingsquirrel-size_restricted.gif"
-                    alt="cartmove"
-                  />
-                </Button>
-              </Link>
+              <h1 style={{ fontSize: "25px" }}>₹5000.00</h1>
+              <img
+                style={{ marginTop: "-8px" }}
+                width={"60px"}
+                src="https://thumbs.gfycat.com/CompleteShallowFlyingsquirrel-size_restricted.gif"
+                alt="cartmove"
+              />
             </div>
           </>
         )}

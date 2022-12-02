@@ -1,9 +1,12 @@
 import React from "react";
 import "./Address.css";
-import { Button, ButtonGroup } from "@chakra-ui/react";
+import { Button, Input } from "@chakra-ui/react";
 import { DeleteIcon } from "@chakra-ui/icons";
+import { Select, Stack } from "@chakra-ui/react";
+import { Radio, RadioGroup } from "@chakra-ui/react";
 
-const Address = () => {
+const Address = (props) => {
+  let { val, fn } = props;
   return (
     <div id="address">
       <div className="Shipping">
@@ -26,8 +29,83 @@ const Address = () => {
         </div>
       </div>
       <div id="Input_box">
-        <div id="In-Input1"></div>
-        <div id="In-Input2"></div>
+        <div id="In-Input1">
+          <Input
+            w={"49%"}
+            style={{ display: "inline" }}
+            placeholder="First Name(Required)*"
+          />
+          &nbsp;
+          <Input
+            w={"49%"}
+            // style={{ display: "inline" }}
+            placeholder="Last Name(Required)*"
+          />
+          <br />
+          <br />
+          <Input
+            errorBorderColor="red.500"
+            placeholder="City/district(Required)*"
+          />
+          <br />
+          <br />
+          <Input placeholder="State(Required)*" />
+          <br />
+          <br />
+          <Stack spacing={3}>
+            <Select variant="filled" placeholder="Landmark">
+              <option>1</option>
+              <option>2</option>
+              <option>3</option>
+            </Select>
+          </Stack>
+          <br />
+          <div style={{ display: "flex", justifyContent: "space-evenly" }}>
+            <RadioGroup defaultValue="2">
+              <Stack spacing={5} direction="row">
+                <Radio colorScheme="red" value="1">
+                  Home
+                </Radio>
+
+                <Radio colorScheme="green" value="2">
+                  Office
+                </Radio>
+              </Stack>
+            </RadioGroup>
+          </div>
+        </div>
+        <div id="In-Input2">
+          <Input placeholder="Enter Your PIN code(Required)*" />
+
+          <br />
+          <br />
+          <Input
+            height="89px"
+            style={{ float: "left" }}
+            placeholder="Flat/House No., Floor,Building,Area(Required)*"
+          />
+          <p
+            style={{ fontSize: "11px", fontWeight: "10px", textAlign: "left" }}
+          >
+            Character Limit:120
+          </p>
+
+          <br />
+          <Input placeholder="Enter Your PIN code(Required)*" />
+        </div>
+      </div>
+      <hr />
+      <hr />
+      <br />
+      <div id="address_foot">
+        <h2 style={{ color: "red", fontWeight: "500" }}>Cancel</h2>
+        <Button
+          onClick={() => fn(3)}
+          style={{ borderRadius: "20px" }}
+          colorScheme="red"
+        >
+          Save & Continue
+        </Button>
       </div>
     </div>
   );
