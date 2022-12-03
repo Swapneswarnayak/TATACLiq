@@ -1,16 +1,18 @@
 import React, { useEffect, useRef, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { userAction } from "../../Actions/userAction";
+// import { userAction } from "../../Actions/userAction";
+import { USER_ACTIONS } from "../../Reducers/userReducer";
 import AuthSuccess from "../AuthSuccess/AuthSuccess";
 import Email from "../Email/Email";
 import Mobile from "../Mobile/Mobile";
 import Otp from "../Otp/Otp";
 import "./UserAuth.css";
+import db from "../../db.json";
 
 const UserAuth = () => {
   const dispatch = useDispatch();
   const usersData = useSelector((storeData) => {
-    return storeData.users;
+    return storeData.counter.users;
   });
   const [authType, toggleAuthType] = useState("email");
   const [stage, setStage] = useState(0);
@@ -29,7 +31,7 @@ const UserAuth = () => {
     const res = await fetch("http://localhost:4000/users");
     const data = await res.json();
     // console.log(data);
-    userAction(data, dispatch);
+    dispatch(USER_ACTIONS.setUsers(data));
   };
 
   const register = async () => {

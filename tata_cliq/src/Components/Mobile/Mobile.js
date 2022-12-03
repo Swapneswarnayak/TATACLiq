@@ -15,8 +15,8 @@ const Mobile = ({ validate, toggleAuthType, x }) => {
           required
           onChange={validate}
         />
-        <label for="name" className="label-name">
-          <span class="content-name">Mobile Number</span>
+        <label htmlFor="name" className="label-name">
+          <span className="content-name">Mobile Number</span>
         </label>
       </div>
 

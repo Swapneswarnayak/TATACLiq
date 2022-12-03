@@ -16,8 +16,8 @@ const Email = ({ validate, toggleAuthType }) => {
           required
           onChange={validate}
         />
-        <label for="name" className="label-name">
-          <span class="content-name">E-mail Address</span>
+        <label htmlFor="name" className="label-name">
+          <span className="content-name">E-mail Address</span>
         </label>
       </div>
       <br />
