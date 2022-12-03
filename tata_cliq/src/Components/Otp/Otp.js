@@ -10,12 +10,68 @@ const Otp = ({ validate, otpCred }) => {
         {otpCred.type === "e" ? otpCred.i : "+91 " + otpCred.i}
       </p>
       <div className="otp-box">
-        <input type="text" className="otp" maxLength="1" />
-        <input type="text" className="otp" maxLength="1" />
-        <input type="text" className="otp" maxLength="1" />
-        <input type="text" className="otp" maxLength="1" />
-        <input type="text" className="otp" maxLength="1" />
-        <input type="text" className="otp" maxLength="1" onChange={validate} />
+        <input
+          type="text"
+          className="otp"
+          id="ist"
+          maxLength="1"
+          onKeyUp={() => {
+            if (document.getElementById("ist").value.length) {
+              document.getElementById("sec").focus();
+            }
+          }}
+        />
+        <input
+          type="text"
+          className="otp"
+          id="sec"
+          maxLength="1"
+          onKeyUp={() => {
+            if (document.getElementById("sec").value.length) {
+              document.getElementById("third").focus();
+            }
+          }}
+        />
+        <input
+          type="text"
+          className="otp"
+          id="third"
+          maxLength="1"
+          onKeyUp={() => {
+            if (document.getElementById("third").value.length) {
+              document.getElementById("fourth").focus();
+            }
+          }}
+        />
+        <input
+          type="text"
+          className="otp"
+          id="fourth"
+          maxLength="1"
+          onKeyUp={() => {
+            if (document.getElementById("fourth").value.length) {
+              document.getElementById("fifth").focus();
+            }
+          }}
+        />
+        <input
+          type="text"
+          className="otp"
+          id="fifth"
+          maxLength="1"
+          onKeyUp={() => {
+            if (document.getElementById("fifth").value.length) {
+              document.getElementById("sixth").focus();
+            }
+          }}
+        />
+        <input
+          type="text"
+          className="otp"
+          id="sixth"
+          maxLength="1"
+          onChange={validate}
+        />
       </div>
 
       <div id="Resend">

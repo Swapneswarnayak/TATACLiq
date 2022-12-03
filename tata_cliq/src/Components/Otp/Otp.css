@@ -6,6 +6,11 @@
   margin-bottom: 20px;
   text-align: center;
   font-size: 20px;
+  transition: all 0.1s;
+}
+.otp:focus {
+  border: #da1c5c;
+  box-shadow: 0 0 2px 2px #da1c5c;
 }
 .there {
   font-size: 35px;
