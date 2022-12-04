@@ -1,5 +1,8 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700&display=swap");
+
 *{
     text-align: left;
+    font-family: 'Rubik', sans-serif;
 }
 
 #main_navbar{
@@ -35,7 +38,7 @@
     margin-right: 80px;
 }
 .upper_boxof_navbar_h1{
-    font-family: bold;
+    /* font-family: bold; */
     font-weight: 600;
     font-size: 12px;
     margin-top: 0;
@@ -46,8 +49,8 @@
     line-height: 40px;
 }
 .lowerboxof_navbar_dropdown{
-    font-family: bold;
-    font-weight: 800;
+    /* font-family: bold; */
+    font-weight: 500;
     font-size: 16px;
     margin-top: 0;
     margin-bottom: 0;
@@ -55,8 +58,8 @@
     line-height: 70px;
 }
 .lowerboxof_navbar_category{
-    font-family: bold;
-    font-weight: 800;
+    /* font-family: bold; */
+    font-weight: 500;
     font-size: 16px;
     margin-top: 0;
     margin-bottom: 0;
@@ -64,7 +67,7 @@
     line-height: 70px;
 }
 .lowerboxof_navbar_brand{
-    font-family: bold;
+    /* font-family: bold; */
     font-weight: 800;
     font-size: 16px;
     margin-top: 0;
@@ -73,7 +76,7 @@
     line-height: 70px;
 }
 .lowerboxof_navbar_Brands{
-    font-family: bold;
+    /* font-family: bold; */
     font-weight: 800;
     font-size: 16px;
     margin-top: 0;
@@ -83,23 +86,24 @@
 }
 #right_lower_box{
     display: flex;
-    gap: 3%;
+    gap: 2.5%;
     flex: 5;
 }
 .dropdown-menu-category{
      display: none; 
      width: 250px;
-     height: 200px;
+     /* height: 200px; */
      position: absolute; 
      background-color: white; 
      z-index: 1;
-     padding-left: 12px;
+     left: 270px;
+     padding-left: 10px;
      padding-right: 14px;
      
 }
 .dropdown-menu-category > div{
     padding-top: 10px;
-    padding-bottom: 10px;
+    padding-bottom: 8.75px;
 }
 .lowerboxof_navbar_category:hover{
     cursor: pointer;
@@ -175,6 +179,7 @@
 }
 .dropdown-menu-category-first:hover .dropdown-menu-category-first-second{
     display: block;
+    background-color: white;
 }
 .dropdown-menu-category-second-second{
     display: none;
@@ -194,6 +199,7 @@
 }
 .dropdown-menu-category-second:hover .dropdown-menu-category-second-second{
     display: block;
+    background-color: white;
 }
 .dropdown-menu-category-third-second{
     display: none;
@@ -213,6 +219,7 @@
 }
 .dropdown-menu-category-third:hover .dropdown-menu-category-third-second{
     display: block;
+    background-color: white;
 }
 
 .dropdown-menu-category-fourth-second{
@@ -233,6 +240,7 @@
 }
 .dropdown-menu-category-fourth:hover .dropdown-menu-category-fourth-second{
     display: block;
+    background-color: white;
 }
 .dropdown-menu-category-fifth-second{
     display: none;
@@ -252,6 +260,7 @@
 }
 .dropdown-menu-category-fifth:hover .dropdown-menu-category-fifth-second{
     display: block;
+    background-color: white;
 }
 
 .dropdown-menu-category-fifth-second{
@@ -268,6 +277,7 @@
 }
 .dropdown-menu-category-fifth:hover .dropdown-menu-category-fifth-second{
     display: block;
+    background-color: white;
 }
 
 .dropdown-menu-category-sixth-second{
@@ -288,6 +298,7 @@
 }
 .dropdown-menu-category-sixth:hover .dropdown-menu-category-sixth-second{
     display: block;
+    background-color: white;
 }
 .dropdown-menu-category-seventh-second{
     display: none;
@@ -307,6 +318,7 @@
 }
 .dropdown-menu-category-seventh:hover .dropdown-menu-category-seventh-second{
     display: block;
+    background-color: white;
 }
 
 
@@ -328,6 +340,7 @@
 }
 .dropdown-menu-category-eight:hover .dropdown-menu-category-eight-second{
     display: block;
+    background-color: white;
 }
 .right_lower_box_second:hover{
     background-color: white;
@@ -356,6 +369,7 @@
 }
 .dropdown-menu-category-brands-first:hover .dropdown-menu-category-brands-first-second{
     display: block;
+    background-color: white;
 }
 
 
@@ -377,6 +391,7 @@
 }
 .dropdown-menu-category-brands-second:hover .dropdown-menu-category-brands-second-second{
     display: block;
+    background-color: white;
 }
 
 
@@ -398,6 +413,7 @@
 }
 .dropdown-menu-category-brands-third:hover .dropdown-menu-category-brands-third-second{
     display: block;
+    background-color: white;
 }
 
 
@@ -419,6 +435,7 @@
 }
 .dropdown-menu-category-brands-fourth:hover .dropdown-menu-category-brands-fourth-second{
     display: block;
+    background-color: white;
 }
 
 .dropdown-menu-category-brands-fifth-second{
@@ -439,6 +456,7 @@
 }
 .dropdown-menu-category-brands-fifth:hover .dropdown-menu-category-brands-fifth-second{
     display: block;
+    background-color: white;
 }
 
 .right_lower_box  a{
@@ -502,15 +520,24 @@
     height: 30px;
     box-shadow: rgba(17, 17, 26, 0.1) 0px 1px 0px;
 }
+.inputdrop:hover{
+    cursor: pointer;
+}
 .inputdrop > h1{
-    font-weight: 600px;
+    font-weight: 800px;
     margin-left: 20px;
+    font-family: rubik;
+    color: black;
     margin-top: 5px;
 }
 .whiteoninput{
     background-color: white;
 }
+.right_lower_box_third:hover .right_lower_box_third_input_box{
+    background-color: white;
+}
 .right_lower_box_third_input_box{
+    padding-left: 18px;
     border: 0px;
 }
 .right_lower_box_third_input_box:hover{
@@ -522,33 +549,33 @@
     font-size: 22px;
 }
 .icon_heart:hover{
-    color: red;
+    color: #FF1744;
 }
-.redround > h4{
+.heart_icon_h4{
     color: white;
     font-size: 15px;
     margin-left: 5px;
     margin-right: 5px;
 }
 .heart_icon{
-    background-color: red;
+    background-color: #FF1744;
     text-align: center;
     border-radius: 50px;
     position: absolute;
     top: 47px;
     padding-left: 5px;
     padding-right: 5px;
-    right: 105px;
+    right: 100px;
 }
 .bag_icon{
-    background-color: red;
+    background-color: #FF1744;
     text-align: center;
     border-radius: 50px;
     position: absolute;
     padding-left: 5px;
     padding-right: 5px;
     top: 47px;
-    right: 45px;
+    right: 43px;
 }
 .fourth_lower_box{
     display: flex;
@@ -563,7 +590,7 @@
     width: 100%;
     height: 40px;
     margin-top: 10px;
-    border-radius: 5px;
+    border-radius: 5px, 5px, 5px, 5px;
     background-color: #4A4A4A;
     border: none;
 }
@@ -601,6 +628,7 @@
 .hidden_box{
     width: 100%;
     position: absolute;
+    background-color: white;
     border-radius: 0px 0px 5px 5px;
 }
 
@@ -614,7 +642,7 @@
 
 @media only screen and (max-width: 780px) and (min-width: 480px) {
     .upper_boxof_navbar_h1{
-        font-family: bold;
+        /* font-family: bold; */
         font-weight: 600;
         font-size: 12px;
         margin-top: 0;
@@ -646,7 +674,7 @@
         padding-right: 0px;
     }
     .lowerboxof_navbar_category{
-        font-family: bold;
+        /* font-family: bold; */
         font-weight: 800;
         font-size: 16px;
         margin-top: 0;
@@ -655,7 +683,7 @@
         line-height: 50px;
     }
     .lowerboxof_navbar_brand{
-        font-family: bold;
+        /* font-family: bold; */
         font-weight: 800;
         font-size: 16px;
         margin-top: 0;
@@ -664,7 +692,7 @@
         line-height: 50px;
     }
     .lowerboxof_navbar_dropdown{
-        font-family: bold;
+        /* font-family: bold; */
         font-weight: 800;
         font-size: 16px;
         margin-top: 0;
@@ -694,32 +722,55 @@
     .icon_heart:hover{
         color: red;
     }
-    .redround > h4{
+    .heart_icon_h4{
         color: white;
-        font-size: 5px;
-        margin-left: 5px;
-        margin-right: 5px;
+        font-size: 10px;
+        margin-left: 3px;
+        margin-right: 3px;
     }
     .heart_icon{
-        background-color: red;
+        background-color: #FF1744;
         text-align: center;
         border-radius: 50px;
         position: absolute;
         top: 47px;
         padding-left: 5px;
         padding-right: 5px;
-        right: 45px;
+        right: 35px;
     }
     .bag_icon{
-        background-color: red;
+        background-color: #FF1744;
         text-align: center;
         border-radius: 50px;
         position: absolute;
         padding-left: 5px;
         padding-right: 5px;
         top: 47px;
-        right: 5px;
+        right: -5px;
     }
+    .dropdown-menu-category-brands{
+        display: none;
+        position: absolute; 
+        background-color: white; 
+         width: 250px;
+         height: 470px;
+         padding-left: 10px;
+         padding-right: 12px;
+        left: 154px;
+        box-shadow: rgba(0, 0, 0, 0.05) 0px 1px 2px 0px;
+    }
+    .dropdown-menu-category{
+        display: none; 
+        width: 250px;
+        height: 200px;
+        position: absolute; 
+        background-color: white; 
+        z-index: 1;
+        left: 154px;
+        padding-left: 12px;
+        padding-right: 14px;
+        
+   }
 }
 
 
@@ -727,7 +778,7 @@
 
 @media only screen and (max-width: 480px){
     .upper_boxof_navbar_h1{
-        font-family: bold;
+        /* font-family: bold; */
         font-weight: 600;
         font-size: 8px;
         margin-top: 0;
@@ -759,7 +810,7 @@
         padding-right: 0px;
     }
     .lowerboxof_navbar_category{
-        font-family: bold;
+        /* font-family: bold; */
         font-weight: 800;
         font-size: 12px;
         margin-top: 0;
@@ -768,7 +819,7 @@
         line-height: 50px;
     }
     .lowerboxof_navbar_brand{
-        font-family: bold;
+        /* font-family: bold; */
         font-weight: 800;
         font-size: 12px;
         margin-top: 0;
@@ -790,7 +841,6 @@
         background-color: white; 
          width: 250px;
          height: 470px;
-         top: 110px;
          padding-left: 10px;
          padding-right: 12px;
         left: 95px;
@@ -800,10 +850,10 @@
         display: none; 
         width: 250px;
         height: 200px;
-        top: 110px;
         position: absolute; 
         background-color: white; 
         z-index: 1;
+        left: 95px;
         padding-left: 12px;
         padding-right: 14px;
         
@@ -820,7 +870,7 @@
          border: none;
      }
      .lowerboxof_navbar_dropdown{
-        font-family: bold;
+        /* font-family: bold; */
         font-weight: 800;
         font-size: 12px;
         margin-top: 0;
@@ -842,14 +892,14 @@
     .icon_heart:hover{
         color: red;
     }
-    .redround > h4{
+    .heart_icon_h4{
         color: white;
-        font-size: 2px;
-        margin-left: 5px;
-        margin-right: 5px;
+        font-size: 11px;
+        margin-left: 2px;
+        margin-right: 2px;
     }
     .heart_icon{
-        background-color: red;
+        background-color: #FF1744;
         text-align: center;
         border-radius: 50px;
         position: absolute;
@@ -859,7 +909,7 @@
         right: 35px;
     }
     .bag_icon{
-        background-color: red;
+        background-color: #FF1744;
         text-align: center;
         border-radius: 50px;
         position: absolute;

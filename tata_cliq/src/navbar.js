@@ -1,4 +1,3 @@
-
 import "./NavBar.css"
 import {Link, Routes, Route} from "react-router-dom"
 import SigninSignup from './SignIn_Signup/Signin_Signup_page';
@@ -37,6 +36,11 @@ function NavBar(){
         if(text == ""){
             setcurrent(false);
         }
+    }
+
+    function clickoninputdrop(targ){
+        console.log(targ);
+        document.getElementById("right_lower_box_third_input_box_id").value = targ;
     }
 
 
@@ -328,7 +332,7 @@ function NavBar(){
 
                                 </div>
                                 <div>
-                                   <div className="a-a" ><Link style={linkstyle}><a>carpets</a></Link></div>
+                                   <div className="a-a" ><Link  style={linkstyle}><a>carpets</a></Link></div>
                                     <div className="a-a" ><Link style={linkstyle}><a>cusion cover</a></Link></div>
                                     <div className="a-a" ><Link style={linkstyle}><a>Doormats</a></Link></div>
                                     <div className="a-a" ><Link style={linkstyle}><a>sets</a></Link></div>
@@ -869,7 +873,7 @@ function NavBar(){
                 </div>
                 <div className="right_lower_box_third">
 
-                    <input className= {current ? "right_lower_box_third_input_box whiteoninput" : "right_lower_box_third_input_box"}  onChange={(event)=>{
+                    <input id="right_lower_box_third_input_box_id" className={current ? "right_lower_box_third_input_box whiteoninput" : "right_lower_box_third_input_box"}  onChange={(event)=>{
                         setText(event.target.value);
                         handinginputbox();
                     }}></input>
@@ -879,7 +883,7 @@ function NavBar(){
 
                          {
                            products.map((elem)=>{
-                         return <>{elem.includes(text) ? <div className="inputdrop"><h1>{elem}</h1></div> : null}</>
+                         return <>{elem.includes(text) ? <div className="inputdrop"><h1 onClick={(ev)=>{clickoninputdrop(ev.target.innerText)}}>{elem}</h1></div> : null}</>
                             })
                          }
                     </div>
@@ -890,13 +894,13 @@ function NavBar(){
                     <div>
                         <div><h1 className="icon_heart"><FontAwesomeIcon icon={faHeart} /></h1></div>
                         {
-                            wishlistlen > 0 ? <div className="redround heart_icon"><Link to="/wishlist"><h4>{wishlistlen}</h4></Link></div> : null
+                            wishlistlen > 0 ? <div className="redround heart_icon"><Link to="/wishlist" ><h4 className="heart_icon_h4">{wishlistlen}</h4></Link></div> : null
                         }
                     </div>
                     <div>
                         <div><h1 className="icon_heart"><FontAwesomeIcon icon={faFolder} /></h1></div>
                         {
-                            cartlen > 0 ? <div className="redround bag_icon"><Link to="/cart"><h4>{cartlen}</h4></Link></div> : null
+                            cartlen > 0 ? <div className="redround bag_icon"><Link to="/cart" ><h4 className="heart_icon_h4">{cartlen}</h4></Link></div> : null
                         }
                     </div>
                 </div>
@@ -908,5 +912,4 @@ function NavBar(){
 
 
 export default NavBar;
-
 
