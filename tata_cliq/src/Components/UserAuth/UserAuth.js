@@ -71,6 +71,9 @@ const UserAuth = () => {
       const mobile = document.querySelector(".mobile").value;
       if (mobile.length === 10) {
         document.getElementById("continue").disabled = false;
+
+        document.getElementById("continue").style.backgroundImage =
+          "linear-gradient(to bottom right, #89216b, #da4453)";
       } else {
         document.getElementById("continue").disabled = true;
       }
