@@ -15,6 +15,7 @@ import {
   Switch,
 } from "@chakra-ui/react";
 import { PhoneIcon, AddIcon, WarningIcon } from "@chakra-ui/icons";
+import { Link } from "react-router-dom";
 
 const CartPay = () => {
   const paynow = () => {
@@ -85,7 +86,12 @@ const CartPay = () => {
                   </div>
                 </div>
               </div> */}
-              <img width={"100%"} src="https://acegif.com/wp-content/uploads/gifs/raining-money-8.gif" alt="honey" />
+              <img
+                style={{ margin: "auto" }}
+                width={"50%"}
+                src="https://media.tenor.com/_al5aErMqPAAAAAd/akshay-kumar-phir-paisa-hi-paisa-hoga.gif"
+                alt="honey"
+              />
             </AccordionPanel>
           </AccordionItem>
 
@@ -132,9 +138,11 @@ const CartPay = () => {
                     style={{ display: "flex", justifyContent: "space-between" }}
                   >
                     <Input w={"50%"} placeholder="CVV" />
-                    <Button onClick={paynow} w={"40%"} colorScheme="red">
-                      Pay Now
-                    </Button>
+                    <Link to={"/success"}>
+                      <Button onClick={paynow} w={"100%"} colorScheme="red">
+                        Pay Now
+                      </Button>
+                    </Link>
                   </div>
                 </div>
               </div>
@@ -346,7 +354,11 @@ const CartPay = () => {
                   </div>
                 </div>
               </div> */}
-              <img width={"100%"} src="https://acegif.com/wp-content/uploads/gifs/raining-money-8.gif" alt="honey" />
+              <img
+                width={"100%"}
+                src="https://acegif.com/wp-content/uploads/gifs/raining-money-8.gif"
+                alt="honey"
+              />
             </AccordionPanel>
           </AccordionItem>
         </Accordion>

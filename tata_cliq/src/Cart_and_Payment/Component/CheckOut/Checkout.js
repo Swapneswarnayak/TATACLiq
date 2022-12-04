@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 import { Checkbox, CheckboxGroup } from "@chakra-ui/react";
 const Checkout = (props) => {
   let { val, fn } = props;
-  console.log(fn);
+  // console.log(fn);
 
   const ToAddress = () => {
     fn(2);

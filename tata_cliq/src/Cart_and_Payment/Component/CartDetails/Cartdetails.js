@@ -3,20 +3,37 @@ import "../Allcss.css/all.css";
 import { Select } from "@chakra-ui/react";
 import { Button, ButtonGroup } from "@chakra-ui/react";
 import { DeleteIcon } from "@chakra-ui/icons";
+import { json } from "react-router-dom";
 
-const Cartdetails = () => {
+const Cartdetails = (props) => {
+  // let[state,setState]=React.useState([])
+
+  let{brand,category,department,id,img,name,price,product_type,strikedprice}=props.props
+  
+  console.log(props.fn)
+  console.log(brand,category,department,id,img,name,price,product_type,strikedprice)
   let [heart, setheart] = React.useState(false);
 
   const handleHeart = () => {
     setheart((prev) => !prev);
   };
-  console.log(heart);
+
+  const handleDelete=(a)=>{
+    let arr=JSON.parse(localStorage.getItem("cartData"))||[]
+    arr.splice(a,1)
+    localStorage.setItem("cartData", JSON.stringify(arr))
+    
+    props.fn(arr)
+
+
+  }
+
 
   return (
     <div className="Cartbox">
       <div className="cart_image">
         <img
-          src="https://img.tatacliq.com/images/i8/437Wx649H/MP000000012030193_437Wx649H_202202061310461.jpeg"
+          src={img}
           alt="shoe"
         />
       </div>
@@ -24,11 +41,11 @@ const Cartdetails = () => {
         <div>
           <div>
             <p style={{ float: "left", fontFamily: "light" }}>
-              Crocs Kid's Bayaband Pink Floater Sandals
+              {name}
             </p>
             <br />
             <br />
-            <p style={{ float: "left" }}>₹3350</p>
+            <p style={{ float: "left" }}>₹{price}</p>
             <p
               style={{
                 float: "left",
@@ -38,12 +55,12 @@ const Cartdetails = () => {
               }}
             >
               {" "}
-              ₹3350
+              ₹{strikedprice}
             </p>
             <br />
             <p style={{ float: "left", fontFamily: "light" }}>Color:</p>
             <p style={{ color: "red", float: "left", fontFamily: "light" }}>
-              &nbsp;Pink
+              &nbsp;Pink | Blue
             </p>
             <p style={{ fontFamily: "light", display: "block" }}>
               Size: UK/IND-8
@@ -58,7 +75,7 @@ const Cartdetails = () => {
               alt="ship"
             />
             <p style={{ fontFamily: "regular" }}>
-              Delivery by 5th Dec | <span style={{ color: "green" }}>FREE</span>
+              Delivery by 7th Dec | <span style={{ color: "green" }}>FREE</span>
             </p>
           </div>
         </div>
@@ -114,7 +131,7 @@ const Cartdetails = () => {
               )}
             </div>
             <div style={{ alignItem: "center" }}>
-              <Button size="s" style={{padding:"5px"}} colorScheme="red">
+              <Button onClick={()=>{handleDelete(props.index)}} size="s" style={{padding:"5px"}} colorScheme="red">
                 <DeleteIcon /> &nbsp;
                 Remove
               </Button>
