@@ -1,11 +1,13 @@
-import logo from './logo.svg';
 import './App.css';
-import NavBar from './NavBar';
+import Home from "./Home/Home/Home.js";
+import NavBar from './navbar/navbar';
+import AllRoutes from './routes/Routes';
 
 function App() {
   return (
     <div className="App">
-      {/* <NavBar /> */}
+        <NavBar />
+        <AllRoutes />
     </div>
   );
 }

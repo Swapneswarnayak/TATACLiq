@@ -1,0 +1,19 @@
+.sidebar {
+  text-align: left;
+  width: 200px;
+  margin-left: 150px;
+  margin-top: 70px;
+}
+.side-list > li {
+  margin-top: 35px;
+}
+.menu {
+  font-weight: 700;
+  padding-bottom: 25px;
+  padding-top: 10px;
+  padding-left: 10px;
+  background-color: #f6f6f6;
+}
+.links:hover {
+  color: #da1c5c;
+}

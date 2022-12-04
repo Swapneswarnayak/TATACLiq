@@ -42,8 +42,8 @@ function SigninSignup(){
                  </PopoverTrigger>
                  <PopoverContent w="180px">
                    <PopoverArrow />
-                   <PopoverBody><Button  _hover={{ bg: '#FF1744' }} bg="#FF1744" size='sm' mt={1} ml={3} borderRadius='lg' color="white"><Link to="/login">Login/Register</Link></Button></PopoverBody>
-                   <PopoverBody><Box ml={3}><h1>My Account</h1></Box></PopoverBody>
+                   <PopoverBody><Button  _hover={{ bg: '#FF1744' }} bg="#FF1744" size='sm' mt={1} ml={3} borderRadius='lg' color="white"><Link to="/authenticate">Login/Register</Link></Button></PopoverBody>
+                   <PopoverBody><Box ml={3}><Link to="/myaccount"><h1>My Account</h1></Link></Box></PopoverBody>
                    <PopoverBody><Box ml={3}><h1>Alert & Coupon</h1></Box></PopoverBody>
                    <PopoverBody><Box ml={3}><h1>Order History</h1></Box></PopoverBody>
                    <PopoverBody><Box ml={3}><h1>My WishList</h1></Box></PopoverBody>

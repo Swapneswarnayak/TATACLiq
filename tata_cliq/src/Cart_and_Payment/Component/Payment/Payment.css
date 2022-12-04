@@ -1,0 +1,50 @@
+#payment{
+    /* background-color: rgb(208, 26, 26); */
+    height: 500px ;
+    width: 95%;
+    padding: 0px 20px 20px 30px;
+    margin: 20px 0px 0px 40px;
+    border-radius: 8px;
+}
+#Delivery_Address{
+    width: 100%;
+    /* height: 150px; */
+    background-color: rgb(255, 255, 255);
+    margin-top: 20px;
+    padding: 20px;
+    border-radius: 10px;
+}
+#Delivery_Mode{
+    width: 100%;
+    /* height: 150px; */
+    background-color: rgb(255, 255, 255);
+    margin-top: 20px;
+    padding: 20px;
+    border-radius: 10px;
+}
+#Active_wallet{
+    width: 100%;
+    /* height: 100px; */
+    background-color: rgb(255, 255, 255);
+    border-radius: 10px;
+    padding: 30px;
+    display: flex;
+    justify-content: space-between;
+}
+
+#Usemy_coin{
+    width: 100%;
+    /* height: 100px; */
+    background-color: rgb(255, 255, 255);
+    border-radius: 10px;
+    padding: 30px;
+}
+#rest{
+    height: auto;
+    background-color: #af1717;
+    padding-bottom: 50px;
+    width: 100%;
+}
+u:hover{
+    cursor: pointer;
+}

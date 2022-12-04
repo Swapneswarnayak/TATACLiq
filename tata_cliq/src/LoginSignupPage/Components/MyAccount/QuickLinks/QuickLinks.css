@@ -1,0 +1,57 @@
+.ql-ul {
+  list-style: none;
+  display: flex;
+}
+
+.ql-ul > li {
+  margin-left: 60px;
+}
+
+.quick-links {
+  text-decoration: none;
+  color: black;
+}
+
+.content-div {
+  margin-top: 40px;
+}
+.content-div1 {
+  margin-top: 40px;
+  font-size: 17px;
+}
+.main-div {
+  margin-top: 80px;
+  font-weight: bold;
+  font-size: 18px;
+}
+.hr {
+  margin: auto;
+  margin-left: 60px;
+  width: 93%;
+  margin-top: 20px;
+  padding-left: 50px;
+  opacity: 0.5;
+}
+.quick-links:hover {
+  color: #da1c5c;
+}
+.select-div {
+  padding: 10px;
+  width: 130px;
+  border-radius: 10px;
+  padding-right: 20px;
+  background-color: rgb(239, 239, 239);
+}
+.button {
+  background-color: #da1c5c;
+  color: white;
+  border: none;
+  padding: 16px;
+  font-weight: 700;
+  font-size: 15px;
+  border-radius: 30px;
+}
+.span {
+  font-size: 13px;
+  color: rgb(164, 156, 145);
+}

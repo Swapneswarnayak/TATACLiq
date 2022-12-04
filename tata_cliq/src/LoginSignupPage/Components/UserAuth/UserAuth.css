@@ -1,0 +1,64 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+#pop-up {
+  position: absolute;
+  margin-top: 260px;
+  /* top: 50%; */
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 450px;
+  height: 600px;
+  padding: 70px 30px;
+  background: #fff;
+  box-shadow: 2px 2px 5px 5px rgba(0 0 0 0.15);
+  border-radius: 40px;
+  border: 1px solid teal;
+}
+#pop-up .close-btn {
+  position: absolute;
+  font-size: 30px;
+  font-weight: bold;
+  top: 15px;
+  right: 15px;
+  width: 35px;
+  height: 35px;
+  color: rgb(73, 72, 72);
+  text-align: center;
+  line-height: 15px;
+  border-radius: 15px;
+  cursor: pointer;
+}
+.pop {
+  width: 350px;
+  padding: 0 0 0 41px;
+  text-align: center;
+}
+.pop > h1 {
+  font-size: 32px;
+  font-weight: 700;
+  font-family: "Overpass", sans-serif !important;
+  color: #212121;
+}
+
+#pink {
+  font-weight: light;
+  font-size: 13px;
+  width: 300px;
+  margin-left: 40px;
+}
+span {
+  font-weight: 600;
+}
+#continue {
+  margin-top: 20px;
+  font-size: 20px;
+  padding: 10px 20px;
+  width: 80%;
+  border-radius: 10px;
+  background-color: #e0e1e3;
+  color: rgb(249, 247, 247);
+  border: none;
+}

@@ -1,16 +1,19 @@
 import "./NavBar.css"
-import {Link, Routes, Route} from "react-router-dom"
-import SigninSignup from './SignIn_Signup/Signin_Signup_page';
-import {ChevronDownIcon} from '@chakra-ui/icons'
+import {Link, Routes, Route} from "react-router-dom";
+import SigninSignup from './Signin_Signip_page';
+import {ChevronDownIcon} from '@chakra-ui/icons';
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 import {faHeart} from '@fortawesome/free-regular-svg-icons';
-import {faFolder} from '@fortawesome/free-regular-svg-icons';
+import { faFolder } from '@fortawesome/free-regular-svg-icons';
 import {useState} from 'react';
-{/* <script src="https://kit.fontawesome.com/e68ecfb53d.js" crossorigin="anonymous"></script> */}
 
 function NavBar(){
-    const [wishlistlen, setwishlistlen] = useState(1);
-    const [cartlen , setcartlen] = useState(1)
+    const wishhlistformlocal = localStorage.getItem("wishlistdata");
+    const len_wish = wishhlistformlocal.length;
+    let cartformlocal = localStorage.getItem("cartdata");
+    let len_cart = cartformlocal.length;
+    const [wishlistlen, setwishlistlen] = useState(len_wish);
+    const [cartlen , setcartlen] = useState(len_cart)
     const [current , setcurrent] = useState(false);
     const [text , setText] = useState("");
 
