@@ -227,4 +227,10 @@ height:100%;
     .mapD img{
         transition: .8s;
     }
-    
+    @media (max-Width: 400px) {
+        .smallimg{
+            height: 100%;
+            display: grid;
+            grid-template-columns: repeat(1fr 3);
+        }
+    }
