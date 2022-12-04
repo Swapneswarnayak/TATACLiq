@@ -1,0 +1,15 @@
+.box{
+    border-radius: '50%';
+    width: "30px";
+    size: "80px";
+    background-color: rgb(249, 3, 3);
+    display: inline;
+}
+.filter{
+    font-size: large;
+}
+.checkboxx{
+    display: flex;
+    margin: 10px;
+     justify-content: space-evenly;
+}

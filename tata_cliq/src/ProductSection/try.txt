@@ -1,0 +1,74 @@
+import { Accordion, Box,Image } from '@chakra-ui/react'
+// import Box from '@mui/material/Box';
+import InputLabel from '@mui/material/InputLabel';
+import MenuItem from '@mui/material/MenuItem';
+import FormControl from '@mui/material/FormControl';
+import Select from '@mui/material/Select';
+import lodergif from './loder.gif'
+import React, { useEffect, useState } from 'react'
+import ProdtctFilter from './ProdtctFilter'
+import ProductCard from './ProductCard'
+
+const ProductAll = () => {
+    // let [url,seturl]=useState("http://localhost:3004/data")
+    let [loder,setloader]=useState(false);
+    let [data,setdata]=useState([])
+    // const [sort, setsort] = useState('');
+
+    // const handleChange = (event) => {
+    //   setsort(event.target.value);
+    // };
+    useEffect(()=>{
+        setloader(true)
+            fetchdata();
+            setTimeout(()=>{
+                setloader(false)
+            },500)
+    },[sort])
+    const fetchdata= async ()=>{
+        let res= await fetch("http://localhost:3004/data")
+        let data=await res.json();
+        setdata(data)
+    }
+    console.log(data);
+  return (
+    <div style={{backgroundColor:'#ECECEC'}}>
+        <Box width={'80%'} margin='auto'>
+            <Box display={'flex'} width={"100%"} padding={'15px'} justifyContent={'right'} >
+                <Box sx={{ minWidth: '280px' }}>
+                    {/* <FormControl fullWidth>
+                        <InputLabel id="demo-simple-select-label">Age: <span style={{fontWeight:"600",fontSize:"16px"}}>{sort}</span></InputLabel>
+                        <Select
+                        labelId="demo-simple-select-label"
+                        id="demo-simple-select"
+                        value={sort}
+                        label="Age"
+                        onChange={handleChange}
+                        >
+                        <MenuItem value={10}>Ten</MenuItem>
+                        <MenuItem value={20}>Twenty</MenuItem>
+                        <MenuItem value={30}>Thirty</MenuItem>
+                        </Select>
+                    </FormControl> */}
+                </Box>
+            </Box>
+            {loder?<Image position={"fixed"} top={"30%"} left="30%" margin="auto" width={"50%"} src={lodergif}/>:<Box width='100%' display='grid' gridTemplateColumns='20% 75%' gap={'3%'}>
+                <Box >
+                   
+                        <ProdtctFilter/>
+                    
+                </Box>
+                <Box display='grid' gridTemplateColumns='repeat(4,1fr)' rowGap={'25px'} columnGap={'8px'}>
+                    {data.map((ele)=>{
+                        return <ProductCard data={ele}/>
+                    })}
+                    
+                </Box>
+            </Box>}
+        </Box>
+                    
+    </div>
+  )
+}
+
+export default ProductAll;
