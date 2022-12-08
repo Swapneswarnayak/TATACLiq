@@ -1,11 +1,15 @@
 import React, { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
-
+import { LoginContext } from "../../../ProductSection/Context/Context";
+import { useContext } from "react";
 const AuthSuccess = ({ validate }) => {
+  const { setloginInfo } = useContext(LoginContext);
+
   const navigate = useNavigate();
 
   useEffect(() => {
     setTimeout(() => {
+      setloginInfo(JSON.parse(sessionStorage.getItem("loggedIn")));
       navigate("/", { replace: true });
     }, 1000);
   }, [navigate]);

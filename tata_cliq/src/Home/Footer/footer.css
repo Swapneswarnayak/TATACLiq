@@ -15,11 +15,11 @@
 
 .secondPart{
    
-    /* border: 2px solid teal; */
+    /* border: 2px solid teal;  */
     margin:30px;
     padding: auto;
     width: 95%;
-    display: block;
+    /* display: block; */
     margin: auto;
     justify-content: space-evenly;
     display: flex;
@@ -27,8 +27,9 @@
 .leftPart{
     display: flex;
     padding-top: 20px;
+
     width:40%;
-    /* border: 2px solid teal; */
+     /* border: 2px solid teal;  */
    
    
 }
@@ -39,10 +40,11 @@
 }
 .leftPart>ul{
     list-style-type: none;
+    justify-content: left;
     color:#242323;
     font-size: bold;
 }
-li{
+ul>li{
  padding-bottom:10px;
  font-weight:200;
 }
@@ -142,20 +144,18 @@ li{
 }
 
 .lastPart{
-    /* border: 2px solid teal; */
+    /* border: 2px solid teal;  */
     width: 85%;
-    display: block;
+    display: block; 
     margin: auto;
 }
-h6{
-    margin-bottom: 20px;
-}
 
 
-    a { 
+ 
+    /* a { 
  
         color:black;
         
-        }
+        }  */
 
 

@@ -1,11 +1,18 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "./Payment.css";
 import { Switch, FormControl, FormLabel } from "@chakra-ui/react";
 import { Button, ButtonGroup } from "@chakra-ui/react";
 
 const Payment = (props) => {
+  let [state, setState] = React.useState([]);
   let { val, fn } = props;
-  console.log(fn);
+
+  useEffect(() => {
+    let arr = JSON.parse(localStorage.getItem("cartdata")) || [];
+    setState(arr);
+    console.log(state);
+  }, []);
+
   return (
     <>
       <div id="payment">
@@ -16,7 +23,7 @@ const Payment = (props) => {
           <div style={{ display: "flex", justifyContent: "space-between" }}>
             <div style={{ display: "flex" }}>
               <img
-                width={"22px"}
+                style={{ width: "22px" }}
                 src="https://www.tatacliq.com/src/cart/components/img/check.svg"
                 alt="tick"
               />
@@ -33,7 +40,8 @@ const Payment = (props) => {
           <br />
           <div>
             <p style={{ fontSize: "18px", textAlign: "left" }}>
-              Homehouse no.29, plot no.957, Krishna Garden annex, Pramay news
+              Swapneswar Nayak <br />
+              Home-house no.29, plot no.957, Krishna Garden annex, Pramay news
               lane, Jagamara Square, Khandagiri
             </p>
           </div>
@@ -42,7 +50,7 @@ const Payment = (props) => {
           <div style={{ display: "flex", justifyContent: "space-between" }}>
             <div style={{ display: "flex" }}>
               <img
-                width={"22px"}
+                style={{ width: "22px" }}
                 src="https://www.tatacliq.com/src/cart/components/img/check.svg"
                 alt="tick"
               />
@@ -58,18 +66,18 @@ const Payment = (props) => {
           </div>
           <br />
           <div>
-            <p style={{ fontSize: "18px", textAlign: "left" }}>
-              Crocs Kid's Bayaband Pink Floater Sandals:
-              <span style={{ fontWeight: "400", color: "red" }}>
-                &nbsp; Delivery by 6th Dec
-              </span>
-            </p>
-            <p style={{ fontSize: "18px", textAlign: "left" }}>
-              Puma Men's BMW MMS Maco SL ME Black Casual Sneakers:
-              <span style={{ fontWeight: "400", color: "red" }}>
-                &nbsp; Delivery by 7th Dec
-              </span>
-            </p>
+            {
+            state.map((el, i) => {
+              return (
+                <p style={{ fontSize: "18px", textAlign: "left" }}>
+                  {el.name}
+                  <span style={{ fontWeight: "400", color: "red" }}>
+                    &nbsp; Delivery by 6th Dec
+                  </span>
+                </p>
+              );
+            })
+            }
           </div>
         </div>
         <br />

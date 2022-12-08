@@ -28,6 +28,7 @@ const QuickLinks = () => {
         <div className="content-div">
           <span className="span">Show orders from : </span>
           <select className="select-div">
+            <option>Select</option>
             <option>Last 6 months </option>
             <option>2022</option>
             <option>2021</option>
@@ -40,7 +41,9 @@ const QuickLinks = () => {
         </div>
 
         <div className="content-div">
-          <button className="button">Continue Shopping</button>
+          <Link to="/">
+            <button className="button">Continue Shopping</button>
+          </Link>
         </div>
       </div>
     </div>

@@ -23,10 +23,12 @@
     font-size:14px;
     /* color: aqua; */
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    /* background-color: blueviolet; */
 }
 .check_name>p:nth-child(2){
     font-size:12px;
     font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    /* background-color: blue; */
 }
 #check_total{
     width: 100%;
@@ -36,7 +38,7 @@
     justify-content: space-between;
 }
 #check_total>div:nth-child(1){
-    width: 47%;
+    width: 45%;
     height: 100%;
     align-items: center;
     /* background-color: brown; */

@@ -13,3 +13,11 @@
     margin: 10px;
      justify-content: space-evenly;
 }
+.checkboxtext{
+    font-size: 13px;
+    font-weight: 400;
+}
+.filterhead{
+    font-size: 16px;
+    font-weight: 500;
+}

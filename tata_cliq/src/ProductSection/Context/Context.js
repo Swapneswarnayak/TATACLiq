@@ -2,5 +2,7 @@ import React from "react"
 
 
 let myContext=React.createContext()
+let LoginContext = React.createContext({});
 
-export default myContext
+
+export {LoginContext,myContext} 

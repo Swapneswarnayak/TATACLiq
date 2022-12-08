@@ -1,8 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700&display=swap");
 
 *{
-    text-align: left;
+    /* text-align: left; */
     font-family: 'Rubik', sans-serif;
+
 }
 
 #main_navbar{
@@ -39,7 +40,7 @@
 }
 .upper_boxof_navbar_h1{
     /* font-family: bold; */
-    font-weight: 600;
+    font-weight: 500;
     font-size: 12px;
     margin-top: 0;
     margin-bottom: 0;
@@ -50,7 +51,7 @@
 }
 .lowerboxof_navbar_dropdown{
     /* font-family: bold; */
-    font-weight: 500;
+    font-weight: 400;
     font-size: 16px;
     margin-top: 0;
     margin-bottom: 0;
@@ -59,7 +60,7 @@
 }
 .lowerboxof_navbar_category{
     /* font-family: bold; */
-    font-weight: 500;
+    font-weight: 200;
     font-size: 16px;
     margin-top: 0;
     margin-bottom: 0;
@@ -68,7 +69,7 @@
 }
 .lowerboxof_navbar_brand{
     /* font-family: bold; */
-    font-weight: 800;
+    font-weight: 200;
     font-size: 16px;
     margin-top: 0;
     margin-bottom: 0;
@@ -77,7 +78,7 @@
 }
 .lowerboxof_navbar_Brands{
     /* font-family: bold; */
-    font-weight: 800;
+    font-weight: 500;
     font-size: 16px;
     margin-top: 0;
     margin-bottom: 0;
@@ -96,7 +97,8 @@
      position: absolute; 
      background-color: white; 
      z-index: 1;
-     left: 270px;
+     left: 265px;
+     text-align: left;
      padding-left: 10px;
      padding-right: 14px;
      
@@ -167,19 +169,23 @@
     position: absolute;
     left: 100%;
     top: 0%;
+   
 }
 .dropdown-menu-category-first-second > div{
    min-width: 800px;
     display: flex;
     height: 470px;
     padding-left: 10px;
+    
 }
 .dropdown-menu-category-first-second > div > div{
     flex: 1;
+    
 }
 .dropdown-menu-category-first:hover .dropdown-menu-category-first-second{
     display: block;
     background-color: white;
+    
 }
 .dropdown-menu-category-second-second{
     display: none;
@@ -187,6 +193,7 @@
     position: absolute;
     left: 100%;
     top: 0%;
+    
 }
 .dropdown-menu-category-second-second > div{
    min-width: 800px;
@@ -196,10 +203,12 @@
 }
 .dropdown-menu-category-second-second > div > div{
     flex: 1;
+    
 }
 .dropdown-menu-category-second:hover .dropdown-menu-category-second-second{
     display: block;
     background-color: white;
+    
 }
 .dropdown-menu-category-third-second{
     display: none;
@@ -207,12 +216,14 @@
     position: absolute;
     left: 100%;
     top: 0%;
+    
 }
 .dropdown-menu-category-third-second > div{
    min-width: 800px;
     display: flex;
     height: 470px;
     padding-left: 10px;
+    
 }
 .dropdown-menu-category-third-second > div > div{
     flex: 1;
@@ -228,6 +239,7 @@
     position: absolute;
     left: 100%;
     top: 0%;
+    
 }
 .dropdown-menu-category-fourth-second > div{
    min-width: 800px;
@@ -345,11 +357,13 @@
 .right_lower_box_second:hover{
     background-color: white;
 }
+
 .right_lower_box_second:hover .lowerboxof_navbar_brand{
     color: black;
 }
 .right_lower_box_second:hover .dropdown-menu-category-brands{
     display: block;
+    position: absolute;
 }
 .dropdown-menu-category-brands-first-second{
     display: none;
@@ -499,6 +513,7 @@
 }
 .right_lower_box_second{
     padding-left: 15px;
+    text-align: left;
     padding-right: 15px;
 }
 .right_lower_box_first{
@@ -584,6 +599,7 @@
     margin-left: -10px;
 }
 .right_lower_box_third{
+    text-align: left;
     width: 60%;
 }
 .right_lower_box_third_input_box{
@@ -637,6 +653,7 @@
 }
 .displayblock{
     display: block;
+    z-index: 4;
 }
 
 
@@ -846,6 +863,7 @@
         left: 95px;
         box-shadow: rgba(0, 0, 0, 0.05) 0px 1px 2px 0px;
     }
+   
     .dropdown-menu-category{
         display: none; 
         width: 250px;

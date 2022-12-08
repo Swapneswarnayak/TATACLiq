@@ -1,10 +1,17 @@
 import { color } from '@chakra-ui/react';
-import React, { useEffect, useState } from 'react'
+import React, { useEffect,useContext, useState } from 'react'
 import { FaRegHeart } from "react-icons/fa";
 import { AiOutlineHeart,AiFillHeart } from "react-icons/ai";
+import {LoginContext} from "./Context/Context";
+import { useToast } from '@chakra-ui/react'
+
 
 
 const Productwishlist = ({data}) => {
+  const { loginInfo, setloginInfo } = useContext(LoginContext);
+
+  const toast = useToast()
+  let user=true;
   
     console.log(data)
       let [show,setshow]=useState(false)
@@ -20,7 +27,8 @@ const Productwishlist = ({data}) => {
   },[data])
 
     const handlewishlist =()=>{
-      let wishlistdata=JSON.parse(localStorage.getItem("wishlistdata"))||[];
+      if(loginInfo !== "{}"){
+        let wishlistdata=JSON.parse(localStorage.getItem("wishlistdata"))||[];
       let temp=false;
       for(let i=0;i<wishlistdata.length;i++){
         if(wishlistdata[i].id===data.id){
@@ -40,6 +48,15 @@ const Productwishlist = ({data}) => {
         wishlistdata.push(data)
         localStorage.setItem("wishlistdata",JSON.stringify(wishlistdata))
         setshow(true)
+      }
+      }else{
+        toast({
+          title: 'Login first',
+          status: 'error',
+          position: "top",
+          duration: 3000,
+          isClosable: true,
+        })
       }
     }
   return (

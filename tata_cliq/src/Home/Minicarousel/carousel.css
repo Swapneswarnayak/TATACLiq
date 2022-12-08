@@ -61,14 +61,14 @@
 }
 
 .left-arrow {
-    left: 1230px;
+    left: 84%;
   
    border-top-left-radius:20px;
    border-bottom-left-radius:20px;
 }
 
 .right-arrow {
-    right: 147px;
+    right: 9%;
     border-top-right-radius:20px;
     border-bottom-right-radius:20px;
 }

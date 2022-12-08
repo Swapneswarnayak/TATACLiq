@@ -1,11 +1,14 @@
 import React from 'react';
+import "../Footer/footer.css"
 // import Carousel from 'react-bootstrap/Carousel';
 import UncontrolledExample from  "../carousel/Carousel"
+// import Footer from '../Footer/Footer';
 import {useState,useEffect} from "react";
 import Carousela from "../Minicarousel/Minicarousel"
 import "../Minicarousel/carousel.css"
 
 import  "./home.css"
+import Footer from '../Footer/Footer';
 function Home(props) {
      const [state,setState]=useState([]);
      const[data,setData]=useState([]);
@@ -250,6 +253,9 @@ function Home(props) {
                   </Carousela>
       
                   </div>
+                
+                    {/* <Footer/> */}
+                  
              </div>
     );
 }

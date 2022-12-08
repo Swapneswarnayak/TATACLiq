@@ -15,7 +15,7 @@ const Cart = () => {
 
   return (
     <div>
-      <Navbar />
+      {/* <Navbar /> */}
       <MyBag />
       <CartShow />
       {/* <Emptycart /> */}

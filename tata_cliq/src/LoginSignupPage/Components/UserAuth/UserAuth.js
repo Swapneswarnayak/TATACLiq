@@ -25,10 +25,12 @@ const UserAuth = () => {
       getUsersData();
       sessionStorage.setItem("loggedIn", JSON.stringify({}));
     }
-  });
+  }, []);
 
   const getUsersData = async () => {
-    const res = await fetch("http://localhost:3004/users");
+    const res = await fetch(
+      "https://raghvendra-tatacilq-data.onrender.com/users"
+    );
     const data = await res.json();
     // console.log(data);
     dispatch(USER_ACTIONS.setUsers(data));
@@ -49,7 +51,10 @@ const UserAuth = () => {
       body: JSON.stringify(userInfo.current),
     };
 
-    await fetch("http://localhost:3004/users", requestOption);
+    await fetch(
+      "https://raghvendra-tatacilq-data.onrender.com/users",
+      requestOption
+    );
     // const data = await res.json();
     // console.log(data);
     getUsersData();

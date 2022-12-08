@@ -8,17 +8,18 @@ import {
   Box,
 } from "@chakra-ui/react";
 import { Checkbox, CheckboxGroup, Stack } from "@chakra-ui/react";
-import myContext from "./Context/Context";
+import { myContext } from "./Context/Context";
+import "./ProductFilter.css";
 
 const Sort = () => {
   let [state, setState] = React.useState([]);
   let [state1, setState1] = React.useState([]);
   let [toggle, setToggle] = React.useState(null);
   let [load, setLoad] = React.useState(false);
-  let reference=useRef("")
+  let reference = useRef("");
 
   let setfunc = useContext(myContext).fn;
-
+  let paramName = useContext(myContext).name;
   useEffect(() => {
     console.log(toggle);
     if (toggle === 1) {
@@ -35,7 +36,9 @@ const Sort = () => {
   }, [state1, state, load]);
 
   const fetchData = async () => {
-    let res = await fetch("http://localhost:3004/data");
+    let res = await fetch(
+      `https://raghvendra-tatacilq-data.onrender.com/data/?department=${paramName}`
+    );
     let data = await res.json();
     setfunc(data);
   };
@@ -52,12 +55,15 @@ const Sort = () => {
     }
     setState([...state, value]);
     setToggle(2);
+    setLoad((prev) => !prev);
   };
 
   const data = async () => {
     // console.log(state);
     if (state.length > 0) {
-      let res = await fetch("http://localhost:3004/data");
+      let res = await fetch(
+        "https://raghvendra-tatacilq-data.onrender.com/data"
+      );
       let data = await res.json();
 
       let arr;
@@ -69,8 +75,8 @@ const Sort = () => {
         arr3 = [].concat(arr, arr3);
       }
       console.log(arr3);
-      setfunc(arr3);
-      setLoad((prev) => !prev);
+      setfunc(shuffle(arr3));
+      // setLoad((prev) => !prev);
     }
   };
 
@@ -89,11 +95,14 @@ const Sort = () => {
     }
     setState1([...state1, value]);
     setToggle(1);
+    setLoad((prev) => !prev);
   };
 
   const data1 = async () => {
     if (state1.length > 0) {
-      let res = await fetch("http://localhost:3004/data");
+      let res = await fetch(
+        "https://raghvendra-tatacilq-data.onrender.com/data"
+      );
       let data = await res.json();
       console.log(data);
       let arr;
@@ -106,12 +115,32 @@ const Sort = () => {
         arr4 = [].concat(arr4, arr);
       }
       console.log(arr4);
-      setfunc(arr4);
-      setLoad((prev) => !prev);
+
+      setfunc(shuffle(arr4));
+      // setLoad((prev) => !prev);
     }
   };
 
-  
+  function shuffle(array) {
+    let currentIndex = array.length,
+      randomIndex;
+
+    // While there remain elements to shuffle.
+    while (currentIndex != 0) {
+      // Pick a remaining element.
+      randomIndex = Math.floor(Math.random() * currentIndex);
+      currentIndex--;
+
+      // And swap it with the current element.
+      [array[currentIndex], array[randomIndex]] = [
+        array[randomIndex],
+        array[currentIndex],
+      ];
+    }
+
+    return array;
+  }
+
   return (
     <div
       style={{
@@ -153,7 +182,7 @@ const Sort = () => {
             <h2>
               <AccordionButton>
                 <Box flex="1" textAlign="left">
-                  <p style={{ fontWeight: "600" }}>Department</p>
+                  <p className="filterhead">Department</p>
                 </Box>
                 <AccordionIcon />
               </AccordionButton>
@@ -167,31 +196,31 @@ const Sort = () => {
                   direction={["column", "row"]}
                 >
                   <Checkbox onChange={handleChange} value="footwear">
-                    Footwear
+                    <span className="checkboxtext">Footwear</span>
                   </Checkbox>
                   <Checkbox onChange={handleChange} value="electronics">
-                    Electronics
+                    <span className="checkboxtext">Electronics</span>
                   </Checkbox>
                   <Checkbox onChange={handleChange} value="beauty & grooming">
-                    beauty & grooming
+                    <span className="checkboxtext">beauty & grooming</span>
                   </Checkbox>
                   <Checkbox onChange={handleChange} value="eyewear">
-                    eyewear
+                    <span className="checkboxtext">eyewear</span>
                   </Checkbox>
                   <Checkbox onChange={handleChange} value="Men's Clothing">
-                    Men's Clothing
+                    <span className="checkboxtext">Men's Clothing</span>
                   </Checkbox>
                   <Checkbox onChange={handleChange} value="Electronics">
-                    Gadgets
+                    <span className="checkboxtext">Gadgets</span>
                   </Checkbox>
                   <Checkbox onChange={handleChange} value="Kids">
-                    Kids
+                    <span className="checkboxtext">Kids</span>
                   </Checkbox>
                   <Checkbox onChange={handleChange} value="Home">
-                    Home
+                    <span className="checkboxtext">Home</span>
                   </Checkbox>
                   <Checkbox onChange={handleChange} value="Beauty & Grooming">
-                    Beauty & Grooming
+                    <span className="checkboxtext">Beauty & Grooming</span>
                   </Checkbox>
                 </Box>
               </CheckboxGroup>
@@ -203,7 +232,7 @@ const Sort = () => {
               <h2>
                 <AccordionButton>
                   <Box flex="1" textAlign="left">
-                    <p style={{ fontWeight: "600" }}>Brand</p>
+                    <p className="filterhead">Brand</p>
                   </Box>
                   <AccordionIcon />
                 </AccordionButton>
@@ -217,37 +246,37 @@ const Sort = () => {
                     direction={["column", "row"]}
                   >
                     <Checkbox onChange={handleChange1} value="Woodland">
-                      Woodland
+                      <span className="checkboxtext">Woodland</span>
                     </Checkbox>
                     <Checkbox onChange={handleChange1} value="U.S. Polo Assn">
-                      U.S. Polo Assn
+                      <span className="checkboxtext">U.S. Polo Assn</span>
                     </Checkbox>
                     <Checkbox onChange={handleChange1} value="Puma">
-                      Puma
+                      <span className="checkboxtext">Puma</span>
                     </Checkbox>
                     <Checkbox onChange={handleChange1} value="Samsung">
-                      Samsung
+                      <span className="checkboxtext">Samsung</span>
                     </Checkbox>
                     <Checkbox onChange={handleChange1} value="Apple">
-                      Apple
+                      <span className="checkboxtext">Apple</span>
                     </Checkbox>
                     <Checkbox onChange={handleChange1} value="Asus">
-                      Asus
+                      <span className="checkboxtext">Asus</span>
                     </Checkbox>
                     <Checkbox onChange={handleChange1} value="Boat">
-                      Boat
+                      <span className="checkboxtext">Boat</span>
                     </Checkbox>
                     <Checkbox onChange={handleChange1} value="Ray-Ban">
-                      Ray-Ban
+                      <span className="checkboxtext">Ray-Ban</span>
                     </Checkbox>
                     <Checkbox onChange={handleChange1} value="O3+">
-                      O3+
+                      <span className="checkboxtext">O3+</span>
                     </Checkbox>
                     <Checkbox onChange={handleChange1} value="VLCC">
-                      VLCC
+                      <span className="checkboxtext">VLCC</span>
                     </Checkbox>
                     <Checkbox onChange={handleChange1} value="Ustraa">
-                      Ustraa
+                      <span className="checkboxtext">Ustraa</span>
                     </Checkbox>
                   </Box>
                 </CheckboxGroup>
@@ -258,7 +287,7 @@ const Sort = () => {
               <h2>
                 <AccordionButton>
                   <Box flex="1" textAlign="left">
-                    <p style={{ fontWeight: "600" }}>Brand</p>
+                    <p className="filterhead">Brand</p>
                   </Box>
                   <AccordionIcon />
                 </AccordionButton>
@@ -272,37 +301,37 @@ const Sort = () => {
                     direction={["column", "row"]}
                   >
                     <Checkbox onChange={handleChange1} value="Woodland">
-                      Woodland
+                      <span className="checkboxtext">Woodland</span>
                     </Checkbox>
                     <Checkbox onChange={handleChange1} value="U.S. Polo Assn">
-                      U.S. Polo Assn
+                      <span className="checkboxtext">U.S. Polo Assn</span>
                     </Checkbox>
                     <Checkbox onChange={handleChange1} value="Puma">
-                      Puma
+                      <span className="checkboxtext">Puma</span>
                     </Checkbox>
                     <Checkbox onChange={handleChange1} value="Samsung">
-                      Samsung
+                      <span className="checkboxtext">Samsung</span>
                     </Checkbox>
                     <Checkbox onChange={handleChange1} value="Apple">
-                      Apple
+                      <span className="checkboxtext">Apple</span>
                     </Checkbox>
                     <Checkbox onChange={handleChange1} value="Asus">
-                      Asus
+                      <span className="checkboxtext">Asus</span>
                     </Checkbox>
                     <Checkbox onChange={handleChange1} value="Boat">
-                      Boat
+                      <span className="checkboxtext">Boat</span>
                     </Checkbox>
                     <Checkbox onChange={handleChange1} value="Ray-Ban">
-                      Ray-Ban
+                      <span className="checkboxtext">Ray-Ban</span>
                     </Checkbox>
                     <Checkbox onChange={handleChange1} value="O3+">
-                      O3+
+                      <span className="checkboxtext">O3+</span>
                     </Checkbox>
                     <Checkbox onChange={handleChange1} value="VLCC">
-                      VLCC
+                      <span className="checkboxtext">VLCC</span>
                     </Checkbox>
                     <Checkbox onChange={handleChange1} value="Ustraa">
-                      Ustraa
+                      <span className="checkboxtext">Ustraa</span>
                     </Checkbox>
                   </Box>
                 </CheckboxGroup>
@@ -314,7 +343,7 @@ const Sort = () => {
             <h2>
               <AccordionButton>
                 <Box flex="1" textAlign="left">
-                  <p style={{ fontWeight: "600" }}>Category</p>
+                  <p className="filterhead">Category</p>
                 </Box>
                 <AccordionIcon />
               </AccordionButton>
@@ -329,19 +358,19 @@ const Sort = () => {
                   direction={["column", "row"]}
                 >
                   <Checkbox onChange={handleChange} value="men">
-                    Men
+                    <span className="checkboxtext">Men</span>
                   </Checkbox>
                   <Checkbox onChange={handleChange} value="mobile phones">
-                    mobile phones
+                    <span className="checkboxtext">mobile phones</span>
                   </Checkbox>
                   <Checkbox onChange={handleChange} value="bath,body & hygiene">
-                    bath,body & hygiene
+                    <span className="checkboxtext">bath,body & hygiene</span>
                   </Checkbox>
                   <Checkbox onChange={handleChange} value="laptop">
-                    laptop
+                    <span className="checkboxtext">laptop</span>
                   </Checkbox>
                   <Checkbox onChange={handleChange} value="Air conditioner">
-                    Air conditioner
+                    <span className="checkboxtext">Air conditioner</span>
                   </Checkbox>
                 </Box>
               </CheckboxGroup>
@@ -352,7 +381,7 @@ const Sort = () => {
             <h2>
               <AccordionButton>
                 <Box flex="1" textAlign="left">
-                  <p style={{ fontWeight: "600" }}>Product Type</p>
+                  <p className="filterhead">Product Type</p>
                 </Box>
                 <AccordionIcon />
               </AccordionButton>
@@ -367,13 +396,13 @@ const Sort = () => {
                   direction={["column", "row"]}
                 >
                   <Checkbox onChange={handleChange} value="notebook & macbook">
-                    notebook & macbook
+                    <span className="checkboxtext">notebook & macbook</span>
                   </Checkbox>
                   <Checkbox onChange={handleChange} value="Desert Air Cooler">
-                    Desert Air Cooler
+                    <span className="checkboxtext">Desert Air Cooler</span>
                   </Checkbox>
                   <Checkbox onChange={handleChange} value="split ac">
-                    split ac
+                    <span className="checkboxtext">split ac</span>
                   </Checkbox>
                   <Checkbox
                     onChange={handleChange}
@@ -390,7 +419,7 @@ const Sort = () => {
             <h2>
               <AccordionButton>
                 <Box flex="1" textAlign="left">
-                  <p style={{ fontWeight: "600" }}>Colour</p>
+                  <p className="filterhead">Colour</p>
                 </Box>
                 <AccordionIcon />
               </AccordionButton>
@@ -405,19 +434,19 @@ const Sort = () => {
                   direction={["column", "row"]}
                 >
                   <Checkbox onChange={handleChange} value="Black">
-                    Black
+                    <span className="checkboxtext">Black</span>
                   </Checkbox>
                   <Checkbox onChange={handleChange} value="Red">
-                    Red
+                    <span className="checkboxtext">Red</span>
                   </Checkbox>
                   <Checkbox onChange={handleChange} value="Yellow">
-                    Yellow
+                    <span className="checkboxtext">Yellow</span>
                   </Checkbox>
                   <Checkbox onChange={handleChange} value="Green">
-                    Green
+                    <span className="checkboxtext">Green</span>
                   </Checkbox>
                   <Checkbox onChange={handleChange} value="Pink">
-                    Pink
+                    <span className="checkboxtext">Pink</span>
                   </Checkbox>
                 </Box>
               </CheckboxGroup>
@@ -428,7 +457,7 @@ const Sort = () => {
             <h2>
               <AccordionButton>
                 <Box flex="1" textAlign="left">
-                  <p style={{ fontWeight: "600" }}>Fabric Family</p>
+                  <p className="filterhead">Fabric Family</p>
                 </Box>
                 <AccordionIcon />
               </AccordionButton>
@@ -443,13 +472,13 @@ const Sort = () => {
                   direction={["column", "row"]}
                 >
                   <Checkbox onChange={handleChange} value="Cotton">
-                    Cotton
+                    <span className="checkboxtext">Cotton</span>
                   </Checkbox>
                   <Checkbox onChange={handleChange} value="Nylon">
-                    Nylon
+                    <span className="checkboxtext">Nylon</span>
                   </Checkbox>
                   <Checkbox onChange={handleChange} value="Rope">
-                    Rope
+                    <span className="checkboxtext">Rope</span>
                   </Checkbox>
                 </Box>
               </CheckboxGroup>
@@ -460,7 +489,7 @@ const Sort = () => {
             <h2>
               <AccordionButton>
                 <Box flex="1" textAlign="left">
-                  <p style={{ fontWeight: "600" }}>Discount</p>
+                  <p className="filterhead">Discount</p>
                 </Box>
                 <AccordionIcon />
               </AccordionButton>
@@ -475,13 +504,13 @@ const Sort = () => {
                   direction={["column", "row"]}
                 >
                   <Checkbox onChange={handleChange} value="naruto">
-                    50%
+                    <span className="checkboxtext">50%</span>
                   </Checkbox>
                   <Checkbox onChange={handleChange} value="sasuke">
-                    100%
+                    <span className="checkboxtext">100%</span>
                   </Checkbox>
                   <Checkbox onChange={handleChange} value="kakashi">
-                    200%
+                    <span className="checkboxtext">200%</span>
                   </Checkbox>
                 </Box>
               </CheckboxGroup>
@@ -492,7 +521,7 @@ const Sort = () => {
             <h2>
               <AccordionButton>
                 <Box flex="1" textAlign="left">
-                  <p style={{ fontWeight: "600" }}>Fit</p>
+                  <p className="filterhead">Fit</p>
                 </Box>
                 <AccordionIcon />
               </AccordionButton>
@@ -507,13 +536,13 @@ const Sort = () => {
                   direction={["column", "row"]}
                 >
                   <Checkbox onChange={handleChange} value="naruto">
-                    Slim
+                    <span className="checkboxtext">Slim</span>
                   </Checkbox>
                   <Checkbox onChange={handleChange} value="sasuke">
-                    Loose
+                    <span className="checkboxtext">Loose</span>
                   </Checkbox>
                   <Checkbox onChange={handleChange} value="kakashi">
-                    Over-Sized
+                    <span className="checkboxtext">Over-Sized</span>
                   </Checkbox>
                 </Box>
               </CheckboxGroup>
@@ -524,7 +553,7 @@ const Sort = () => {
             <h2>
               <AccordionButton>
                 <Box flex="1" textAlign="left">
-                  <p style={{ fontWeight: "600" }}>Occasion</p>
+                  <p className="filterhead">Occasion</p>
                 </Box>
                 <AccordionIcon />
               </AccordionButton>
@@ -539,13 +568,13 @@ const Sort = () => {
                   direction={["column", "row"]}
                 >
                   <Checkbox onChange={handleChange} value="naruto">
-                    Marraige
+                    <span className="checkboxtext">Marraige</span>
                   </Checkbox>
                   <Checkbox onChange={handleChange} value="sasuke">
-                    Official
+                    <span className="checkboxtext">Official</span>
                   </Checkbox>
                   <Checkbox onChange={handleChange} value="kakashi">
-                    Party
+                    <span className="checkboxtext">Party</span>
                   </Checkbox>
                 </Box>
               </CheckboxGroup>
@@ -556,7 +585,7 @@ const Sort = () => {
             <h2>
               <AccordionButton>
                 <Box flex="1" textAlign="left">
-                  <p style={{ fontWeight: "600" }}>All Discount</p>
+                  <p className="filterhead">All Discount</p>
                 </Box>
                 <AccordionIcon />
               </AccordionButton>
@@ -571,13 +600,13 @@ const Sort = () => {
                   direction={["column", "row"]}
                 >
                   <Checkbox onChange={handleChange} value="naruto">
-                    Jio
+                    <span className="checkboxtext">Jio</span>
                   </Checkbox>
                   <Checkbox onChange={handleChange} value="sasuke">
-                    Airtel
+                    <span className="checkboxtext">Airtel</span>
                   </Checkbox>
                   <Checkbox onChange={handleChange} value="kakashi">
-                    Vodafone
+                    <span className="checkboxtext">Vodafone</span>
                   </Checkbox>
                 </Box>
               </CheckboxGroup>
@@ -588,7 +617,7 @@ const Sort = () => {
             <h2>
               <AccordionButton>
                 <Box flex="1" textAlign="left">
-                  <p style={{ fontWeight: "600" }}>Availability</p>
+                  <p className="filterhead">Availability</p>
                 </Box>
                 <AccordionIcon />
               </AccordionButton>
@@ -603,13 +632,13 @@ const Sort = () => {
                   direction={["column", "row"]}
                 >
                   <Checkbox onChange={handleChange} value="naruto">
-                    No
+                    <span className="checkboxtext">No</span>
                   </Checkbox>
                   <Checkbox onChange={handleChange} value="sasuke">
-                    Little
+                    <span className="checkboxtext">Little</span>
                   </Checkbox>
                   <Checkbox onChange={handleChange} value="kakashi">
-                    Full House
+                    <span className="checkboxtext">Full House</span>
                   </Checkbox>
                 </Box>
               </CheckboxGroup>
@@ -620,7 +649,7 @@ const Sort = () => {
             <h2>
               <AccordionButton>
                 <Box flex="1" textAlign="left">
-                  <p style={{ fontWeight: "600" }}>Pattern</p>
+                  <p className="filterhead">Pattern</p>
                 </Box>
                 <AccordionIcon />
               </AccordionButton>
@@ -635,13 +664,13 @@ const Sort = () => {
                   direction={["column", "row"]}
                 >
                   <Checkbox onChange={handleChange} value="naruto">
-                    Cross
+                    <span className="checkboxtext">Cross</span>
                   </Checkbox>
                   <Checkbox onChange={handleChange} value="sasuke">
-                    Lining
+                    <span className="checkboxtext">Lining</span>
                   </Checkbox>
                   <Checkbox onChange={handleChange} value="kakashi">
-                    Transparent
+                    <span className="checkboxtext">Transparent</span>
                   </Checkbox>
                 </Box>
               </CheckboxGroup>

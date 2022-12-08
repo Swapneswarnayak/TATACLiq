@@ -10,24 +10,33 @@ import {
   useDisclosure,
 } from "@chakra-ui/react";
 import { ChevronRightIcon } from "@chakra-ui/icons";
-
-import React from "react";
+import myCartContext from "../../CartContext/Cartcontext";
+import React, { useContext } from "react";
 import { Highlight } from "@chakra-ui/react";
 import { Tabs, TabList, TabPanels, Tab, TabPanel } from "@chakra-ui/react";
 
 export default function BasicUsage() {
   const { isOpen, onOpen, onClose } = useDisclosure();
+  let { totval, totalfn, coupon, setcop } = useContext(myCartContext);
 
   const myFunc = (a) => {
     onClose();
-    console.log(a);
+    console.log(totval, totalfn);
+    if (a === "WOW33") {
+      console.log(totval - 300);
+      setcop(300);
+    } else if (a === "ALPHA12") {
+      setcop(1000);
+    } else if (a === "MAGIC6") {
+      setcop(600);
+    }
   };
 
   return (
     <>
       <Button w={"100%"} bgColor={"white"} onClick={onOpen}>
         <img
-          width={"53px"}
+          style={{ width: "54px" }}
           src="https://i.pinimg.com/originals/97/e2/0f/97e20f80e51dcaf17a3b78a860d8e43a.gif"
           alt="gif"
         />
