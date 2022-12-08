@@ -1,0 +1,50 @@
+
+
+#address{
+    background-color: rgb(255, 255, 255);
+    height: 500px ;
+    width: 95%;
+    padding: 20px 20px 20px 30px;
+    margin: 20px 0px 0px 40px;
+    border-radius: 8px;
+    /* font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; */
+}
+input::placeholder{
+    font-weight: 300;
+}
+
+.Shipping{
+    /* background-color: blue; */
+    width: 100%;
+    
+    display: flex;
+    justify-content: space-between;
+}
+
+#Input_box{
+    width: 95%;
+    margin: 20px auto;
+    height: 300px;
+    /* background-color: aquamarine; */
+    display: flex;
+    gap: 20px;
+}
+#In-Input1{
+    width: 50%;
+    height: 300px;
+    /* background-color: chartreuse; */
+}
+#In-Input2{
+    width: 50%;
+    height: 300px;
+    /* background-color: rgb(69, 36, 190); */
+}
+#address_foot{
+    height: 50px;
+    width: 50%;
+    float: right;
+    /* background-color: palegoldenrod; */
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}

@@ -1,0 +1,13 @@
+#E-Cart{
+    width: 80%;
+    height: 500px;
+    /* background-color: aquamarine; */
+    margin: 10px auto;
+    padding: 10px;
+}
+#E-Cart>div{
+    /* height: 400px; */
+    width: 70%;
+    margin:  auto;
+    /* background-color: burlywood; */
+}
