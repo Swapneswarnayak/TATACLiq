@@ -15,7 +15,7 @@ import React, { useContext } from "react";
 import { Highlight } from "@chakra-ui/react";
 import { Tabs, TabList, TabPanels, Tab, TabPanel } from "@chakra-ui/react";
 //modal compone
-//modal componen
+//modal compone
 
 
 export default function BasicUsage() {
