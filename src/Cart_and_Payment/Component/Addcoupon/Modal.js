@@ -15,7 +15,8 @@ import React, { useContext } from "react";
 import { Highlight } from "@chakra-ui/react";
 import { Tabs, TabList, TabPanels, Tab, TabPanel } from "@chakra-ui/react";
 //modal component
-//modal component
+//modal componen
+
 
 export default function BasicUsage() {
   const { isOpen, onOpen, onClose } = useDisclosure();
