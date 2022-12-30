@@ -63,7 +63,6 @@ const Checkout = (props) => {
                   <b>Total Payable Amount</b>
                 </h1>
               </div>
-              {/* hi there */}
               <div>
                 <h1 style={{ fontSize: "25px" }}>
                   ₹{Math.round(total - total * (10 / 100))}

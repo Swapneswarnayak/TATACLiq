@@ -7,6 +7,7 @@ import { LoginContext } from "./ProductSection/Context/Context";
 import Footer from "./Home/Footer/Footer";
 import { useEffect } from "react";
 
+
 function App() {
   const [loginInfo, setloginInfo] = useState(
     JSON.parse(sessionStorage.getItem("loggedIn"))
@@ -17,11 +18,12 @@ function App() {
   }, );
   return (
     <div className="App">
-      <LoginContext.Provider value={{ loginInfo, setloginInfo, fn: setinputLoad, valu:inputLoad }}>
+       <LoginContext.Provider value={{ loginInfo, setloginInfo, fn: setinputLoad, valu:inputLoad }}>
         <NavBar fn={setinputLoad} />
         <AllRoutes  />
         <Footer />
-      </LoginContext.Provider>
+      </LoginContext.Provider> 
+      
     </div>
   );
 }

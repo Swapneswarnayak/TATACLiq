@@ -236,7 +236,7 @@ function Home(props) {
     
                 </Carousela>
                    </div>
-                   <div style={{paddingBottom:"100px"}}>
+                   <div style={{paddingBottom:"20%"}}>
                    <Carousela
                    show={4}
                      >

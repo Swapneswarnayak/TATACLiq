@@ -11,7 +11,7 @@ const AuthSuccess = ({ validate }) => {
     setTimeout(() => {
       setloginInfo(JSON.parse(sessionStorage.getItem("loggedIn")));
       navigate("/", { replace: true });
-    }, 1000);
+    }, 3000);
   }, [navigate]);
 
   return (
@@ -21,10 +21,12 @@ const AuthSuccess = ({ validate }) => {
         src="https://www.tatacliq.com/src/mobile-number-login/images/sucess_login.svg"
         alt="success"
       />
-      <div style={{ marginTop: "30px" }}>
-        <h2>You're Successfully</h2>
-        <h2>Logged In</h2>
-        <h2>Start CLiQuing</h2>
+
+      <div style={{ marginTop: "10%" }}>
+        <h2 style={{ fontSize: "20px" }}>You're Successfully</h2>
+        <h2 style={{ fontSize: "20px" }}>Logged In</h2>
+        <br />
+        <h2 style={{ fontSize: "25px" }}>Start CLiQuing</h2>
       </div>
     </div>
   );

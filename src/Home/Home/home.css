@@ -4,14 +4,14 @@
 }
 .smallimg{
     display: flex;
-    margin-top: 50px;
-    height: 120px;
+    margin-top: 10px;
+    height: 100%;
     background-color: hsl(0,0%,93%);
     width: 100%;    
 }
 .smallimg>div{
     margin: auto;
-    height: 110px;
+    /* height: 110px; */
     width:8%;  
 }
 img{
@@ -21,29 +21,25 @@ img{
 .brende,.smallb,.smalld{ 
     margin:auto;
     display: block;
-    height: 160px;
     width: 80%;
-    margin-top: 100px;   
+    margin-top: 10%;   
 }
 .smalle{
     margin:auto;
     display: block;
-    height: 160px;
     width: 80%;
-    margin-top: 100px;
-    margin-bottom: 150px;   
+    margin-top: 15%;
+    margin-bottom: 15%;   
 }
 .smalla{
     margin:auto;
     display: block;
-    height: 140px;
     width: 100%;
-    margin-top: 60px;
+    margin-top: 8%;
 }
 .smallc{
     margin: auto;
     display: block;
-    height: 360px;
     width: 80%;
     margin-top: 50px;
     
@@ -51,7 +47,6 @@ img{
 .brenda,.brendc,.brendd,.brendf{
     display: flex;
     margin: auto;
-    height: 400px;
     width: 70%;
     margin-top: 60px;  
 }
@@ -60,12 +55,10 @@ height:100%;
 }
 .brendf>div{
     margin: auto;
-    height: 340px;
     width: 23.5%;
 }
 .brenda>div{
     margin: auto;
-    height: 340px;
     width: 23.5%;
 }
 
@@ -89,18 +82,16 @@ height:100%;
 
 .brendb,.brendh,.brendl,.brendn{
     margin: auto;
-    height: 150px;
     width: 80%;
-    margin-top: 80px;   
+    margin-top: 10%;   
 }
 
 .brendi,.brendj,.brendk,.brendo{
    margin: auto;
   
     display: flex;
-    height: 400px;
     width: 83%;
-    margin-top: 60px;
+    margin-top: 20%;
   
 }
 .brendi img:hover{
@@ -138,7 +129,6 @@ height:100%;
 .brendg{
     margin: auto;
     display: block;
-    height: 360px;
     width: 80%;
     margin-top: 40px;
     
@@ -151,19 +141,16 @@ height:100%;
 }
 .brendi>div{
     margin: auto;
-    height: 380px;
     width: 48%;
    
 }
 .brendj>div{
     margin: auto;
-    height: 380px;
     width: 48%;
     
 }
 .brendk>div{
     margin: auto;
-    height: 380px;
     width: 48%;
     
 }
@@ -175,7 +162,6 @@ height:100%;
 }
 .brendo>div{
     margin: auto;
-    height: 380px;
     width: 48%;
     
 }
@@ -187,7 +173,6 @@ height:100%;
       padding: 0px 5px 0px 5px;
      
       width: 70%;
-      height: 350px;
      
 }
 .mapA img:hover{
@@ -227,10 +212,10 @@ height:100%;
     .mapD img{
         transition: .8s;
     }
-    @media (max-Width: 400px) {
+    /* @media (max-Width: 400px) {
         .smallimg{
             height: 100%;
             display: grid;
             grid-template-columns: repeat(1fr 5);
         }
-    }
+    } */

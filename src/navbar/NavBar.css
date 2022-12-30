@@ -36,7 +36,7 @@
 
 #right_upper_box_right_box{
     display: flex;
-    margin-right: 80px;
+    margin-right: 7%;
 }
 .upper_boxof_navbar_h1{
     /* font-family: bold; */
@@ -50,7 +50,7 @@
     line-height: 40px;
 }
 .lowerboxof_navbar_dropdown{
-    /* font-family: bold; */
+    /* font-family: bold;ddsd */
     font-weight: 400;
     font-size: 16px;
     margin-top: 0;
@@ -89,6 +89,7 @@
     display: flex;
     gap: 2.5%;
     flex: 5;
+    width: 100%;
 }
 .dropdown-menu-category{
      display: none; 
@@ -127,6 +128,7 @@
      background-color: white; 
      width: 250px;
      height: 470px;
+     z-index: 1;
      padding-left: 10px;
      padding-right: 12px;
     left: 270px;
@@ -372,6 +374,7 @@
     position: absolute;
     left: 100%;
     top: 0%;
+   
 }
 .dropdown-menu-category-brands-first-second > div{
    min-width: 800px;
@@ -937,3 +940,75 @@
         right: 0px;
     }
 }
+#top_log{
+    width: 10%;
+    display: none;
+}
+#navbar_left_bar{
+    display: none;
+}
+@media only screen and (max-width: 1100px) {
+    /* #right_upper_box{
+        width: 90%;
+    } */
+    #right_lower_box{
+        width: 90%;
+    }
+  }
+  @media only screen and (max-width: 800px) {
+    .right_lower_box_second_first{
+        display: none;
+    }
+  }
+@media only screen and (max-width: 600px) {
+    #right_upper_box{
+        display: none;
+    }
+    #top_log{
+        display: block;
+        margin: auto;
+    }
+    #navbar_left_box{
+        display: none;
+    }
+    #right_lower_box{
+        display: flex;
+        width: 70%;
+        justify-content: space-around;
+        margin: auto;
+    }
+    .right_lower_box_first{
+        display: none;
+    }
+    #navbar_left_bar{
+        padding: 2%;
+        display: block;
+        display: flex;
+        margin: auto;
+
+    }
+     
+    
+    
+    
+  }
+  @media only screen and (max-width: 400px) {
+    
+    #right_lower_box{
+       display: none;
+    }
+    #navbar_left_bar button{
+        background-color: #212121;
+        color: white;
+        
+    }
+  }
+  @media only screen and (max-width: 240px) {
+    
+    #navbar_left_bar{
+      display: none;
+    }
+    #navbar_right_box{
+        padding: 10px;
+    }
+  }

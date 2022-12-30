@@ -1750,6 +1750,17 @@
       "strikedprice": "1122",
       "price": "1020",
       "product_type": "Mens Grooming Sets"
+    },
+    {
+      "id": "155",
+      "department": "women's wear",
+      "category": "Women Saree",
+      "img": "https://img.tatacliq.com/images/i7/437Wx649H/MP000000008525469_437Wx649H_202101092237461.jpeg",
+      "brand": "Taneria",
+      "name": "Taneria silky saree",
+      "strikedprice": "8122",
+      "price": "5020",
+      "product_type": "women's wear"
     }
   ]
 }

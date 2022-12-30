@@ -7,6 +7,10 @@ import Email from "../Email/Email";
 import Mobile from "../Mobile/Mobile";
 import Otp from "../Otp/Otp";
 import "./UserAuth.css";
+import { useNavigate } from "react-router-dom";
+import { Button, ButtonGroup, HStack } from "@chakra-ui/react";
+import { FaFacebook, FaGoogle } from "react-icons/fa";
+
 // import db from "../../db.json";
 
 const UserAuth = () => {
@@ -18,6 +22,7 @@ const UserAuth = () => {
   const [stage, setStage] = useState(0);
   const userInfo = useRef({ email: "", mobile: "" });
   const otpCred = useRef({ type: "", i: "" });
+  let navigate = useNavigate();
 
   useEffect(() => {
     document.getElementById("continue").disabled = true;
@@ -151,13 +156,43 @@ const UserAuth = () => {
 
   return (
     <div id="pop-up">
-      <div className="close-btn">&times;</div>
+      <div
+        onClick={() => {
+          navigate("/");
+        }}
+        className="close-btn"
+      >
+        &times;
+      </div>
       {authType === "email" ? (
         <div className="email-auth">
           <div className="pop">
             <h1>Welcome to Tata CLiQ</h1>
           </div>
           <Email validate={validate} toggleAuthType={toggleAuthType} />
+          <br />
+          <div>
+            <Button
+              onClick={() => {
+                console.log("facebook");
+              }}
+              colorScheme="facebook"
+              leftIcon={<FaFacebook />}
+            >
+              Login with Facebook
+            </Button>
+            <br />
+            <br />
+            <Button
+              onClick={() => {
+                console.log("google");
+              }}
+              colorScheme="red"
+              leftIcon={<FaGoogle />}
+            >
+              Signin with Google+
+            </Button>
+          </div>
         </div>
       ) : authType === "mobile" ? (
         <div className="mobile-auth">

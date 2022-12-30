@@ -7,7 +7,7 @@ import { json } from "react-router-dom";
 import myCartContext from "../../CartContext/Cartcontext";
 
 const Cartdetails = (props) => {
-  // let[state,setState]=React.useState([])
+  // let[state,setState]=React.useState([]d)
   let { totval, totalfn, coupon, setcop, load2 } = useContext(myCartContext);
 
   let {
