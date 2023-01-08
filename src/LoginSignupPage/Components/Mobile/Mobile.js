@@ -8,13 +8,7 @@ const Mobile = ({ validate, toggleAuthType, x }) => {
       <br />
       {/* <p>+91</p> */}
       <div className="form">
-        <input
-          type="text"
-          placeholder=""
-          className="mobile"
-          required
-          onChange={validate}
-        />
+        <input type="text" className="mobile" required onChange={validate} />
         <label htmlFor="name" className="label-name">
           <span className="content-name">Mobile Number</span>
         </label>
