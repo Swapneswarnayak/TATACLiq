@@ -1,8 +1,7 @@
 # Tata-Cliq
+Tata-Cliq is an E-commerce web application to provides a wide range of apparel and accessories for men and women. It is owned by Tata Digital Limited, of Tata Group. TataCLiQ operates in categories such as Electronics, Fashion, Footwear and Accessories.
 
 This project is a clone of the [Tata CLiQ](https://www.tatacliq.com/) website. During construct week in Masai School, we as a group of 6 members collaborated and cloned the website within 4 days time.
-
-Tata-Cliq is an E-commerce web application to provides a wide range of apparel and accessories for men and women. It is owned by Tata Digital Limited, of Tata Group. TataCLiQ operates in categories such as Electronics, Fashion, Footwear and Accessories.
 
 ## Deployed Link
 
